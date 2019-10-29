@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>DisassemblyDiagnoser Output Bdn1.LoopOverArrayOfBytes-20191029-112535</title>
+<title>DisassemblyDiagnoser Output Bdn1.LoopOverArrayOfBytes-20191029-134326</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -14,262 +14,2556 @@
 <body>
 <table>
 <thead>
-<tr><th colspan="7">Bdn1.LoopOverArrayOfBytes-20191029-112535</th></tr>
+<tr><th colspan="8">LoopOverArrayOfBytes.Foreach</th></tr>
 <tr>
-<th>Foreach .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ForSimple .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ForLocalCached .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ListForeachSimple .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ListForSimple .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ListForToArray .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
-<th>ListForLocalCached .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca49820 Bdn1.LoopOverArrayOfBytes.Foreach()
-00007ffd`aca49820 488b4108        mov     rax,qword ptr [rcx+8]
-00007ffd`aca49824 33d2            xor     edx,edx
-00007ffd`aca49826 33c9            xor     ecx,ecx
-00007ffd`aca49828 448b4008        mov     r8d,dword ptr [rax+8]
-00007ffd`aca4982c 4585c0          test    r8d,r8d
-00007ffd`aca4982f 7e13            jle     00007ffd`aca49844
-00007ffd`aca49831 4c63c9          movsxd  r9,ecx
-00007ffd`aca49834 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
-00007ffd`aca4983a 4103d1          add     edx,r9d
-00007ffd`aca4983d ffc1            inc     ecx
-00007ffd`aca4983f 443bc1          cmp     r8d,ecx
-00007ffd`aca49842 7fed            jg      00007ffd`aca49831
-00007ffd`aca49844 8bc2            mov     eax,edx
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5e5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e5769 33d2            xor     edx,edx
+00007ff8`7d5e576b 33c9            xor     ecx,ecx
+00007ff8`7d5e576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5e5771 4585c0          test    r8d,r8d
+00007ff8`7d5e5774 7e13            jle     00007ff8`7d5e5789
+00007ff8`7d5e5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e577f 4103d1          add     edx,r9d
+00007ff8`7d5e5782 ffc1            inc     ecx
+00007ff8`7d5e5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5e5787 7fed            jg      00007ff8`7d5e5776
+00007ff8`7d5e5789 8bc2            mov     eax,edx
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca29820 Bdn1.LoopOverArrayOfBytes.ForSimple()
-00007ffd`aca29824 33c0            xor     eax,eax
-00007ffd`aca29826 33d2            xor     edx,edx
-00007ffd`aca29828 488b4908        mov     rcx,qword ptr [rcx+8]
-00007ffd`aca2982c 83790800        cmp     dword ptr [rcx+8],0
-00007ffd`aca29830 7e1c            jle     00007ffd`aca2984e
-00007ffd`aca29832 4c8bc1          mov     r8,rcx
-00007ffd`aca29835 413b5008        cmp     edx,dword ptr [r8+8]
-00007ffd`aca29839 7318            jae     00007ffd`aca29853
-00007ffd`aca2983b 4c63ca          movsxd  r9,edx
-00007ffd`aca2983e 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
-00007ffd`aca29844 4103c0          add     eax,r8d
-00007ffd`aca29847 ffc2            inc     edx
-00007ffd`aca29849 395108          cmp     dword ptr [rcx+8],edx
-00007ffd`aca2984c 7fe4            jg      00007ffd`aca29832
-00007ffd`aca2984e 4883c428        add     rsp,28h
+00007ff8`7d5d92e0 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5d92e0 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5d92e4 33d2            xor     edx,edx
+00007ff8`7d5d92e6 33c9            xor     ecx,ecx
+00007ff8`7d5d92e8 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5d92ec 4585c0          test    r8d,r8d
+00007ff8`7d5d92ef 7e13            jle     00007ff8`7d5d9304
+00007ff8`7d5d92f1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d92f4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d92fa 4103d1          add     edx,r9d
+00007ff8`7d5d92fd ffc1            inc     ecx
+00007ff8`7d5d92ff 443bc1          cmp     r8d,ecx
+00007ff8`7d5d9302 7fed            jg      00007ff8`7d5d92f1
+00007ff8`7d5d9304 8bc2            mov     eax,edx
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca69820 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
-00007ffd`aca69820 488b4108        mov     rax,qword ptr [rcx+8]
-00007ffd`aca69824 33d2            xor     edx,edx
-00007ffd`aca69826 33c9            xor     ecx,ecx
-00007ffd`aca69828 448b4008        mov     r8d,dword ptr [rax+8]
-00007ffd`aca6982c 4585c0          test    r8d,r8d
-00007ffd`aca6982f 7e13            jle     00007ffd`aca69844
-00007ffd`aca69831 4c63c9          movsxd  r9,ecx
-00007ffd`aca69834 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
-00007ffd`aca6983a 4103d1          add     edx,r9d
-00007ffd`aca6983d ffc1            inc     ecx
-00007ffd`aca6983f 443bc1          cmp     r8d,ecx
-00007ffd`aca69842 7fed            jg      00007ffd`aca69831
-00007ffd`aca69844 8bc2            mov     eax,edx
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5f5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f5769 33d2            xor     edx,edx
+00007ff8`7d5f576b 33c9            xor     ecx,ecx
+00007ff8`7d5f576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5f5771 4585c0          test    r8d,r8d
+00007ff8`7d5f5774 7e13            jle     00007ff8`7d5f5789
+00007ff8`7d5f5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f577f 4103d1          add     edx,r9d
+00007ff8`7d5f5782 ffc1            inc     ecx
+00007ff8`7d5f5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5f5787 7fed            jg      00007ff8`7d5f5776
+00007ff8`7d5f5789 8bc2            mov     eax,edx
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca49d50 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
-00007ffd`aca49d66 33f6            xor     esi,esi
-00007ffd`aca49d68 488b4910        mov     rcx,qword ptr [rcx+10h]
-00007ffd`aca49d6c 8b01            mov     eax,dword ptr [rcx]
-00007ffd`aca49d6e 8b4114          mov     eax,dword ptr [rcx+14h]
-00007ffd`aca49d71 33d2            xor     edx,edx
-00007ffd`aca49d73 48894c2428      mov     qword ptr [rsp+28h],rcx
-00007ffd`aca49d78 33c9            xor     ecx,ecx
-00007ffd`aca49d7a 894c2430        mov     dword ptr [rsp+30h],ecx
-00007ffd`aca49d7e 89442434        mov     dword ptr [rsp+34h],eax
-00007ffd`aca49d82 88542438        mov     byte ptr [rsp+38h],dl
-00007ffd`aca49d86 488d4c2428      lea     rcx,[rsp+28h]
-00007ffd`aca49d8b e8f03adaff      call    00007ffd`ac7ed880
-00007ffd`aca49d90 85c0            test    eax,eax
-00007ffd`aca49d92 7417            je      00007ffd`aca49dab
-00007ffd`aca49d94 8b4c2438        mov     ecx,dword ptr [rsp+38h]
-00007ffd`aca49d98 0fb6c9          movzx   ecx,cl
-00007ffd`aca49d9b 03f1            add     esi,ecx
-00007ffd`aca49d9d 488d4c2428      lea     rcx,[rsp+28h]
-00007ffd`aca49da2 e8d93adaff      call    00007ffd`ac7ed880
-00007ffd`aca49da7 85c0            test    eax,eax
-00007ffd`aca49da9 75e9            jne     00007ffd`aca49d94
-00007ffd`aca49dab 8bc6            mov     eax,esi
+00007ff8`7d5f9410 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5f9410 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f9414 33d2            xor     edx,edx
+00007ff8`7d5f9416 33c9            xor     ecx,ecx
+00007ff8`7d5f9418 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5f941c 4585c0          test    r8d,r8d
+00007ff8`7d5f941f 7e13            jle     00007ff8`7d5f9434
+00007ff8`7d5f9421 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f9424 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f942a 4103d1          add     edx,r9d
+00007ff8`7d5f942d ffc1            inc     ecx
+00007ff8`7d5f942f 443bc1          cmp     r8d,ecx
+00007ff8`7d5f9432 7fed            jg      00007ff8`7d5f9421
+00007ff8`7d5f9434 8bc2            mov     eax,edx
 
-00007ffd`aca4b3f0 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
-00007ffd`aca4df56 488b4d10        mov     rcx,qword ptr [rbp+10h]
-00007ffd`aca4df5a 488b09          mov     rcx,qword ptr [rcx]
-00007ffd`aca4df5d 48894de8        mov     qword ptr [rbp-18h],rcx
-00007ffd`aca4df61 488b4d10        mov     rcx,qword ptr [rbp+10h]
-00007ffd`aca4df65 8b490c          mov     ecx,dword ptr [rcx+0Ch]
-00007ffd`aca4df68 488b45e8        mov     rax,qword ptr [rbp-18h]
-00007ffd`aca4df6c 3b4814          cmp     ecx,dword ptr [rax+14h]
-00007ffd`aca4df6f 7558            jne     00007ffd`aca4dfc9
-00007ffd`aca4df71 488b4d10        mov     rcx,qword ptr [rbp+10h]
-00007ffd`aca4df75 8b4908          mov     ecx,dword ptr [rcx+8]
-00007ffd`aca4df78 488b45e8        mov     rax,qword ptr [rbp-18h]
-00007ffd`aca4df7c 3b4810          cmp     ecx,dword ptr [rax+10h]
-00007ffd`aca4df7f 7348            jae     00007ffd`aca4dfc9
-00007ffd`aca4df81 488b4de8        mov     rcx,qword ptr [rbp-18h]
-00007ffd`aca4df85 488b7108        mov     rsi,qword ptr [rcx+8]
-00007ffd`aca4df89 488b4d10        mov     rcx,qword ptr [rbp+10h]
-00007ffd`aca4df8d 8b4908          mov     ecx,dword ptr [rcx+8]
-00007ffd`aca4df90 3b4e08          cmp     ecx,dword ptr [rsi+8]
-00007ffd`aca4df93 7346            jae     00007ffd`aca4dfdb
-00007ffd`aca4df95 8bc1            mov     eax,ecx
-00007ffd`aca4df97 486bc028        imul    rax,rax,28h
-00007ffd`aca4df9b 488d740610      lea     rsi,[rsi+rax+10h]
-00007ffd`aca4dfa0 488b7d10        mov     rdi,qword ptr [rbp+10h]
-00007ffd`aca4dfa4 4883c710        add     rdi,10h
-00007ffd`aca4dfa8 e8e3568b5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ffe`0c303690)
-00007ffd`aca4dfad b904000000      mov     ecx,4
-00007ffd`aca4dfb2 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
-00007ffd`aca4dfb5 488b4510        mov     rax,qword ptr [rbp+10h]
-00007ffd`aca4dfb9 ff4008          inc     dword ptr [rax+8]
-00007ffd`aca4dfbc b801000000      mov     eax,1
-00007ffd`aca4dfc1 488d65f0        lea     rsp,[rbp-10h]
-00007ffd`aca4dfc5 5e              pop     rsi
-00007ffd`aca4dfc6 5f              pop     rdi
-00007ffd`aca4dfc7 5d              pop     rbp
-00007ffd`aca4dfc8 c3              ret
-00007ffd`aca4dfc9 488b4d10        mov     rcx,qword ptr [rbp+10h]
-00007ffd`aca4dfcd e836f2ffff      call    00007ffd`aca4d208
-00007ffd`aca4dfd2 90              nop
-00007ffd`aca4dfd3 488d65f0        lea     rsp,[rbp-10h]
-00007ffd`aca4dfd7 5e              pop     rsi
-00007ffd`aca4dfd8 5f              pop     rdi
-00007ffd`aca4dfd9 5d              pop     rbp
-00007ffd`aca4dfda c3              ret
-00007ffd`aca4dfdb e8200f9e5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ffe`0c42ef00)
-00007ffd`aca4dfe0 cc              int     3
-00007ffd`aca4dfe1 0000            add     byte ptr [rax],al
-00007ffd`aca4dfe3 0019            add     byte ptr [rcx],bl
-00007ffd`aca4dfe5 07              ???
-00007ffd`aca4dfe6 0400            add     al,0
-00007ffd`aca4dfe8 07              ???
-00007ffd`aca4dfe9 52              push    rdx
-00007ffd`aca4dfea 036002          add     esp,dword ptr [rax+2]
-00007ffd`aca4dfed 7001            jo      00007ffd`aca4dff0
-00007ffd`aca4dfef 50              push    rax
-00007ffd`aca4dff0 400000          add     byte ptr [rax],al
-00007ffd`aca4dff3 0000            add     byte ptr [rax],al
-00007ffd`aca4dff5 0000            add     byte ptr [rax],al
-00007ffd`aca4dff7 0028            add     byte ptr [rax],ch
-00007ffd`aca4dff9 82              ???
-00007ffd`aca4dffa ad              lods    dword ptr [rsi]
-00007ffe`09d7ed30 4883ec28        sub     rsp,28h
-00007ffe`09d7ed34 90              nop
-00007ffe`09d7ed35 488b01          mov     rax,qword ptr [rcx]
-00007ffe`09d7ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
-00007ffe`09d7ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
-00007ffe`09d7ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ffe`09d7ed69)
-00007ffe`09d7ed40 8b5108          mov     edx,dword ptr [rcx+8]
-00007ffe`09d7ed43 3b5010          cmp     edx,dword ptr [rax+10h]
-00007ffe`09d7ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ffe`09d7ed69)
-00007ffe`09d7ed48 488b4008        mov     rax,qword ptr [rax+8]
-00007ffe`09d7ed4c 3b5008          cmp     edx,dword ptr [rax+8]
-00007ffe`09d7ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ffe`09d7ed91)
-00007ffe`09d7ed51 4863d2          movsxd  rdx,edx
-00007ffe`09d7ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
-00007ffe`09d7ed59 884110          mov     byte ptr [rcx+10h],al
-00007ffe`09d7ed5c ff4108          inc     dword ptr [rcx+8]
-00007ffe`09d7ed5f b801000000      mov     eax,1
-00007ffe`09d7ed64 4883c428        add     rsp,28h
-00007ffe`09d7ed68 c3              ret
-00007ffe`09d7ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
-00007ffe`09d7ed6c 488b11          mov     rdx,qword ptr [rcx]
-00007ffe`09d7ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
-00007ffe`09d7ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ffe`09d7ed8a)
-00007ffe`09d7ed74 488b01          mov     rax,qword ptr [rcx]
-00007ffe`09d7ed77 8b4010          mov     eax,dword ptr [rax+10h]
-00007ffe`09d7ed7a ffc0            inc     eax
-00007ffe`09d7ed7c 894108          mov     dword ptr [rcx+8],eax
-00007ffe`09d7ed7f c6411000        mov     byte ptr [rcx+10h],0
-00007ffe`09d7ed83 33c0            xor     eax,eax
-00007ffe`09d7ed85 4883c428        add     rsp,28h
-00007ffe`09d7ed89 c3              ret
-00007ffe`09d7ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ffe`097472a0)]
-00007ffe`09d7ed90 cc              int     3
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5b5760 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5b5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5b5769 33d2            xor     edx,edx
+00007ff8`7d5b576b 33c9            xor     ecx,ecx
+00007ff8`7d5b576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5b5771 4585c0          test    r8d,r8d
+00007ff8`7d5b5774 7e13            jle     00007ff8`7d5b5789
+00007ff8`7d5b5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5b5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5b577f 4103d1          add     edx,r9d
+00007ff8`7d5b5782 ffc1            inc     ecx
+00007ff8`7d5b5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5b5787 7fed            jg      00007ff8`7d5b5776
+00007ff8`7d5b5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d609410 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d609410 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d609414 33d2            xor     edx,edx
+00007ff8`7d609416 33c9            xor     ecx,ecx
+00007ff8`7d609418 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d60941c 4585c0          test    r8d,r8d
+00007ff8`7d60941f 7e13            jle     00007ff8`7d609434
+00007ff8`7d609421 4c63c9          movsxd  r9,ecx
+00007ff8`7d609424 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d60942a 4103d1          add     edx,r9d
+00007ff8`7d60942d ffc1            inc     ecx
+00007ff8`7d60942f 443bc1          cmp     r8d,ecx
+00007ff8`7d609432 7fed            jg      00007ff8`7d609421
+00007ff8`7d609434 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5e5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e5769 33d2            xor     edx,edx
+00007ff8`7d5e576b 33c9            xor     ecx,ecx
+00007ff8`7d5e576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5e5771 4585c0          test    r8d,r8d
+00007ff8`7d5e5774 7e13            jle     00007ff8`7d5e5789
+00007ff8`7d5e5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e577f 4103d1          add     edx,r9d
+00007ff8`7d5e5782 ffc1            inc     ecx
+00007ff8`7d5e5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5e5787 7fed            jg      00007ff8`7d5e5776
+00007ff8`7d5e5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d92e0 Bdn1.LoopOverArrayOfBytes.Foreach()
+00007ff8`7d5d92e0 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5d92e4 33d2            xor     edx,edx
+00007ff8`7d5d92e6 33c9            xor     ecx,ecx
+00007ff8`7d5d92e8 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5d92ec 4585c0          test    r8d,r8d
+00007ff8`7d5d92ef 7e13            jle     00007ff8`7d5d9304
+00007ff8`7d5d92f1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d92f4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d92fa 4103d1          add     edx,r9d
+00007ff8`7d5d92fd ffc1            inc     ecx
+00007ff8`7d5d92ff 443bc1          cmp     r8d,ecx
+00007ff8`7d5d9302 7fed            jg      00007ff8`7d5d92f1
+00007ff8`7d5d9304 8bc2            mov     eax,edx
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ForSimple</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5f5765 33c0            xor     eax,eax
+00007ff8`7d5f5767 33d2            xor     edx,edx
+00007ff8`7d5f5769 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5f576d 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5f5771 7e1c            jle     00007ff8`7d5f578f
+00007ff8`7d5f5773 4c8bc1          mov     r8,rcx
+00007ff8`7d5f5776 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f577a 7318            jae     00007ff8`7d5f5794
+00007ff8`7d5f577c 4c63ca          movsxd  r9,edx
+00007ff8`7d5f577f 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f5785 4103c0          add     eax,r8d
+00007ff8`7d5f5788 ffc2            inc     edx
+00007ff8`7d5f578a 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5f578d 7fe4            jg      00007ff8`7d5f5773
+00007ff8`7d5f578f 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d6092e0 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d6092e4 33c0            xor     eax,eax
+00007ff8`7d6092e6 33d2            xor     edx,edx
+00007ff8`7d6092e8 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d6092ec 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d6092f0 7e1c            jle     00007ff8`7d60930e
+00007ff8`7d6092f2 4c8bc1          mov     r8,rcx
+00007ff8`7d6092f5 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d6092f9 7318            jae     00007ff8`7d609313
+00007ff8`7d6092fb 4c63ca          movsxd  r9,edx
+00007ff8`7d6092fe 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d609304 4103c0          add     eax,r8d
+00007ff8`7d609307 ffc2            inc     edx
+00007ff8`7d609309 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d60930c 7fe4            jg      00007ff8`7d6092f2
+00007ff8`7d60930e 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d5760 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5d5765 33c0            xor     eax,eax
+00007ff8`7d5d5767 33d2            xor     edx,edx
+00007ff8`7d5d5769 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5d576d 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5d5771 7e1c            jle     00007ff8`7d5d578f
+00007ff8`7d5d5773 4c8bc1          mov     r8,rcx
+00007ff8`7d5d5776 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5d577a 7318            jae     00007ff8`7d5d5794
+00007ff8`7d5d577c 4c63ca          movsxd  r9,edx
+00007ff8`7d5d577f 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5d5785 4103c0          add     eax,r8d
+00007ff8`7d5d5788 ffc2            inc     edx
+00007ff8`7d5d578a 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5d578d 7fe4            jg      00007ff8`7d5d5773
+00007ff8`7d5d578f 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e9410 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5e9414 33c0            xor     eax,eax
+00007ff8`7d5e9416 33d2            xor     edx,edx
+00007ff8`7d5e9418 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5e941c 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5e9420 7e1c            jle     00007ff8`7d5e943e
+00007ff8`7d5e9422 4c8bc1          mov     r8,rcx
+00007ff8`7d5e9425 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5e9429 7318            jae     00007ff8`7d5e9443
+00007ff8`7d5e942b 4c63ca          movsxd  r9,edx
+00007ff8`7d5e942e 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5e9434 4103c0          add     eax,r8d
+00007ff8`7d5e9437 ffc2            inc     edx
+00007ff8`7d5e9439 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5e943c 7fe4            jg      00007ff8`7d5e9422
+00007ff8`7d5e943e 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5b5760 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5b5765 33c0            xor     eax,eax
+00007ff8`7d5b5767 33d2            xor     edx,edx
+00007ff8`7d5b5769 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5b576d 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5b5771 7e1c            jle     00007ff8`7d5b578f
+00007ff8`7d5b5773 4c8bc1          mov     r8,rcx
+00007ff8`7d5b5776 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5b577a 7318            jae     00007ff8`7d5b5794
+00007ff8`7d5b577c 4c63ca          movsxd  r9,edx
+00007ff8`7d5b577f 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5b5785 4103c0          add     eax,r8d
+00007ff8`7d5b5788 ffc2            inc     edx
+00007ff8`7d5b578a 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5b578d 7fe4            jg      00007ff8`7d5b5773
+00007ff8`7d5b578f 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d609410 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d609414 33c0            xor     eax,eax
+00007ff8`7d609416 33d2            xor     edx,edx
+00007ff8`7d609418 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d60941c 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d609420 7e1c            jle     00007ff8`7d60943e
+00007ff8`7d609422 4c8bc1          mov     r8,rcx
+00007ff8`7d609425 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d609429 7318            jae     00007ff8`7d609443
+00007ff8`7d60942b 4c63ca          movsxd  r9,edx
+00007ff8`7d60942e 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d609434 4103c0          add     eax,r8d
+00007ff8`7d609437 ffc2            inc     edx
+00007ff8`7d609439 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d60943c 7fe4            jg      00007ff8`7d609422
+00007ff8`7d60943e 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5e5765 33c0            xor     eax,eax
+00007ff8`7d5e5767 33d2            xor     edx,edx
+00007ff8`7d5e5769 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5e576d 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5e5771 7e1c            jle     00007ff8`7d5e578f
+00007ff8`7d5e5773 4c8bc1          mov     r8,rcx
+00007ff8`7d5e5776 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5e577a 7318            jae     00007ff8`7d5e5794
+00007ff8`7d5e577c 4c63ca          movsxd  r9,edx
+00007ff8`7d5e577f 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5e5785 4103c0          add     eax,r8d
+00007ff8`7d5e5788 ffc2            inc     edx
+00007ff8`7d5e578a 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5e578d 7fe4            jg      00007ff8`7d5e5773
+00007ff8`7d5e578f 4883c428        add     rsp,28h
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f92e0 Bdn1.LoopOverArrayOfBytes.ForSimple()
+00007ff8`7d5f92e4 33c0            xor     eax,eax
+00007ff8`7d5f92e6 33d2            xor     edx,edx
+00007ff8`7d5f92e8 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5f92ec 83790800        cmp     dword ptr [rcx+8],0
+00007ff8`7d5f92f0 7e1c            jle     00007ff8`7d5f930e
+00007ff8`7d5f92f2 4c8bc1          mov     r8,rcx
+00007ff8`7d5f92f5 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f92f9 7318            jae     00007ff8`7d5f9313
+00007ff8`7d5f92fb 4c63ca          movsxd  r9,edx
+00007ff8`7d5f92fe 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f9304 4103c0          add     eax,r8d
+00007ff8`7d5f9307 ffc2            inc     edx
+00007ff8`7d5f9309 395108          cmp     dword ptr [rcx+8],edx
+00007ff8`7d5f930c 7fe4            jg      00007ff8`7d5f92f2
+00007ff8`7d5f930e 4883c428        add     rsp,28h
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ForLocalCached</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5e5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e5769 33d2            xor     edx,edx
+00007ff8`7d5e576b 33c9            xor     ecx,ecx
+00007ff8`7d5e576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5e5771 4585c0          test    r8d,r8d
+00007ff8`7d5e5774 7e13            jle     00007ff8`7d5e5789
+00007ff8`7d5e5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e577f 4103d1          add     edx,r9d
+00007ff8`7d5e5782 ffc1            inc     ecx
+00007ff8`7d5e5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5e5787 7fed            jg      00007ff8`7d5e5776
+00007ff8`7d5e5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d619410 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d619410 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d619414 33d2            xor     edx,edx
+00007ff8`7d619416 33c9            xor     ecx,ecx
+00007ff8`7d619418 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d61941c 4585c0          test    r8d,r8d
+00007ff8`7d61941f 7e13            jle     00007ff8`7d619434
+00007ff8`7d619421 4c63c9          movsxd  r9,ecx
+00007ff8`7d619424 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d61942a 4103d1          add     edx,r9d
+00007ff8`7d61942d ffc1            inc     ecx
+00007ff8`7d61942f 443bc1          cmp     r8d,ecx
+00007ff8`7d619432 7fed            jg      00007ff8`7d619421
+00007ff8`7d619434 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5b5760 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5b5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5b5769 33d2            xor     edx,edx
+00007ff8`7d5b576b 33c9            xor     ecx,ecx
+00007ff8`7d5b576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5b5771 4585c0          test    r8d,r8d
+00007ff8`7d5b5774 7e13            jle     00007ff8`7d5b5789
+00007ff8`7d5b5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5b5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5b577f 4103d1          add     edx,r9d
+00007ff8`7d5b5782 ffc1            inc     ecx
+00007ff8`7d5b5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5b5787 7fed            jg      00007ff8`7d5b5776
+00007ff8`7d5b5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f92e0 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5f92e0 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f92e4 33d2            xor     edx,edx
+00007ff8`7d5f92e6 33c9            xor     ecx,ecx
+00007ff8`7d5f92e8 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5f92ec 4585c0          test    r8d,r8d
+00007ff8`7d5f92ef 7e13            jle     00007ff8`7d5f9304
+00007ff8`7d5f92f1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f92f4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f92fa 4103d1          add     edx,r9d
+00007ff8`7d5f92fd ffc1            inc     ecx
+00007ff8`7d5f92ff 443bc1          cmp     r8d,ecx
+00007ff8`7d5f9302 7fed            jg      00007ff8`7d5f92f1
+00007ff8`7d5f9304 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d5760 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5d5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5d5769 33d2            xor     edx,edx
+00007ff8`7d5d576b 33c9            xor     ecx,ecx
+00007ff8`7d5d576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5d5771 4585c0          test    r8d,r8d
+00007ff8`7d5d5774 7e13            jle     00007ff8`7d5d5789
+00007ff8`7d5d5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d577f 4103d1          add     edx,r9d
+00007ff8`7d5d5782 ffc1            inc     ecx
+00007ff8`7d5d5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5d5787 7fed            jg      00007ff8`7d5d5776
+00007ff8`7d5d5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d6092e0 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d6092e0 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d6092e4 33d2            xor     edx,edx
+00007ff8`7d6092e6 33c9            xor     ecx,ecx
+00007ff8`7d6092e8 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d6092ec 4585c0          test    r8d,r8d
+00007ff8`7d6092ef 7e13            jle     00007ff8`7d609304
+00007ff8`7d6092f1 4c63c9          movsxd  r9,ecx
+00007ff8`7d6092f4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d6092fa 4103d1          add     edx,r9d
+00007ff8`7d6092fd ffc1            inc     ecx
+00007ff8`7d6092ff 443bc1          cmp     r8d,ecx
+00007ff8`7d609302 7fed            jg      00007ff8`7d6092f1
+00007ff8`7d609304 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5f5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f5769 33d2            xor     edx,edx
+00007ff8`7d5f576b 33c9            xor     ecx,ecx
+00007ff8`7d5f576d 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5f5771 4585c0          test    r8d,r8d
+00007ff8`7d5f5774 7e13            jle     00007ff8`7d5f5789
+00007ff8`7d5f5776 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f5779 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f577f 4103d1          add     edx,r9d
+00007ff8`7d5f5782 ffc1            inc     ecx
+00007ff8`7d5f5784 443bc1          cmp     r8d,ecx
+00007ff8`7d5f5787 7fed            jg      00007ff8`7d5f5776
+00007ff8`7d5f5789 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e92e0 Bdn1.LoopOverArrayOfBytes.ForLocalCached()
+00007ff8`7d5e92e0 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e92e4 33d2            xor     edx,edx
+00007ff8`7d5e92e6 33c9            xor     ecx,ecx
+00007ff8`7d5e92e8 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5e92ec 4585c0          test    r8d,r8d
+00007ff8`7d5e92ef 7e13            jle     00007ff8`7d5e9304
+00007ff8`7d5e92f1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e92f4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e92fa 4103d1          add     edx,r9d
+00007ff8`7d5e92fd ffc1            inc     ecx
+00007ff8`7d5e92ff 443bc1          cmp     r8d,ecx
+00007ff8`7d5e9302 7fed            jg      00007ff8`7d5e92f1
+00007ff8`7d5e9304 8bc2            mov     eax,edx
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ForLocalCachedUnrolled</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c5760 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5c5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5c5769 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5c576c 8bca            mov     ecx,edx
+00007ff8`7d5c576e c1f91f          sar     ecx,1Fh
+00007ff8`7d5c5771 83e103          and     ecx,3
+00007ff8`7d5c5774 03ca            add     ecx,edx
+00007ff8`7d5c5776 c1f902          sar     ecx,2
+00007ff8`7d5c5779 4533c0          xor     r8d,r8d
+00007ff8`7d5c577c 4533c9          xor     r9d,r9d
+00007ff8`7d5c577f 4533d2          xor     r10d,r10d
+00007ff8`7d5c5782 85c9            test    ecx,ecx
+00007ff8`7d5c5784 7e6c            jle     00007ff8`7d5c57f2
+00007ff8`7d5c5786 458bca          mov     r9d,r10d
+00007ff8`7d5c5789 41c1e102        shl     r9d,2
+00007ff8`7d5c578d 443bca          cmp     r9d,edx
+00007ff8`7d5c5790 0f8389000000    jae     00007ff8`7d5c581f
+00007ff8`7d5c5796 4d63d9          movsxd  r11,r9d
+00007ff8`7d5c5799 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5c579f 4503c3          add     r8d,r11d
+00007ff8`7d5c57a2 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5c57a6 443bda          cmp     r11d,edx
+00007ff8`7d5c57a9 7374            jae     00007ff8`7d5c581f
+00007ff8`7d5c57ab 4d63db          movsxd  r11,r11d
+00007ff8`7d5c57ae 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5c57b4 4503d8          add     r11d,r8d
+00007ff8`7d5c57b7 458bc3          mov     r8d,r11d
+00007ff8`7d5c57ba 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5c57be 443bda          cmp     r11d,edx
+00007ff8`7d5c57c1 735c            jae     00007ff8`7d5c581f
+00007ff8`7d5c57c3 4d63db          movsxd  r11,r11d
+00007ff8`7d5c57c6 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5c57cc 4503d8          add     r11d,r8d
+00007ff8`7d5c57cf 458bc3          mov     r8d,r11d
+00007ff8`7d5c57d2 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5c57d6 443bda          cmp     r11d,edx
+00007ff8`7d5c57d9 7344            jae     00007ff8`7d5c581f
+00007ff8`7d5c57db 4d63db          movsxd  r11,r11d
+00007ff8`7d5c57de 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5c57e4 4503d8          add     r11d,r8d
+00007ff8`7d5c57e7 458bc3          mov     r8d,r11d
+00007ff8`7d5c57ea 41ffc2          inc     r10d
+00007ff8`7d5c57ed 443bd1          cmp     r10d,ecx
+00007ff8`7d5c57f0 7c94            jl      00007ff8`7d5c5786
+00007ff8`7d5c57f2 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5c57fa 3bd1            cmp     edx,ecx
+00007ff8`7d5c57fc 7e19            jle     00007ff8`7d5c5817
+00007ff8`7d5c57fe 3bca            cmp     ecx,edx
+00007ff8`7d5c5800 731d            jae     00007ff8`7d5c581f
+00007ff8`7d5c5802 4c63c9          movsxd  r9,ecx
+00007ff8`7d5c5805 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5c580b 4503c8          add     r9d,r8d
+00007ff8`7d5c580e 458bc1          mov     r8d,r9d
+00007ff8`7d5c5811 ffc1            inc     ecx
+00007ff8`7d5c5813 3bd1            cmp     edx,ecx
+00007ff8`7d5c5815 7fe7            jg      00007ff8`7d5c57fe
+00007ff8`7d5c5817 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e92e0 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5e92e4 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e92e8 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5e92eb 8bca            mov     ecx,edx
+00007ff8`7d5e92ed c1f91f          sar     ecx,1Fh
+00007ff8`7d5e92f0 83e103          and     ecx,3
+00007ff8`7d5e92f3 03ca            add     ecx,edx
+00007ff8`7d5e92f5 c1f902          sar     ecx,2
+00007ff8`7d5e92f8 4533c0          xor     r8d,r8d
+00007ff8`7d5e92fb 4533c9          xor     r9d,r9d
+00007ff8`7d5e92fe 4533d2          xor     r10d,r10d
+00007ff8`7d5e9301 85c9            test    ecx,ecx
+00007ff8`7d5e9303 7e6c            jle     00007ff8`7d5e9371
+00007ff8`7d5e9305 458bca          mov     r9d,r10d
+00007ff8`7d5e9308 41c1e102        shl     r9d,2
+00007ff8`7d5e930c 443bca          cmp     r9d,edx
+00007ff8`7d5e930f 0f8389000000    jae     00007ff8`7d5e939e
+00007ff8`7d5e9315 4d63d9          movsxd  r11,r9d
+00007ff8`7d5e9318 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e931e 4503c3          add     r8d,r11d
+00007ff8`7d5e9321 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5e9325 443bda          cmp     r11d,edx
+00007ff8`7d5e9328 7374            jae     00007ff8`7d5e939e
+00007ff8`7d5e932a 4d63db          movsxd  r11,r11d
+00007ff8`7d5e932d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e9333 4503d8          add     r11d,r8d
+00007ff8`7d5e9336 458bc3          mov     r8d,r11d
+00007ff8`7d5e9339 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5e933d 443bda          cmp     r11d,edx
+00007ff8`7d5e9340 735c            jae     00007ff8`7d5e939e
+00007ff8`7d5e9342 4d63db          movsxd  r11,r11d
+00007ff8`7d5e9345 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e934b 4503d8          add     r11d,r8d
+00007ff8`7d5e934e 458bc3          mov     r8d,r11d
+00007ff8`7d5e9351 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5e9355 443bda          cmp     r11d,edx
+00007ff8`7d5e9358 7344            jae     00007ff8`7d5e939e
+00007ff8`7d5e935a 4d63db          movsxd  r11,r11d
+00007ff8`7d5e935d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e9363 4503d8          add     r11d,r8d
+00007ff8`7d5e9366 458bc3          mov     r8d,r11d
+00007ff8`7d5e9369 41ffc2          inc     r10d
+00007ff8`7d5e936c 443bd1          cmp     r10d,ecx
+00007ff8`7d5e936f 7c94            jl      00007ff8`7d5e9305
+00007ff8`7d5e9371 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5e9379 3bd1            cmp     edx,ecx
+00007ff8`7d5e937b 7e19            jle     00007ff8`7d5e9396
+00007ff8`7d5e937d 3bca            cmp     ecx,edx
+00007ff8`7d5e937f 731d            jae     00007ff8`7d5e939e
+00007ff8`7d5e9381 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e9384 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e938a 4503c8          add     r9d,r8d
+00007ff8`7d5e938d 458bc1          mov     r8d,r9d
+00007ff8`7d5e9390 ffc1            inc     ecx
+00007ff8`7d5e9392 3bd1            cmp     edx,ecx
+00007ff8`7d5e9394 7fe7            jg      00007ff8`7d5e937d
+00007ff8`7d5e9396 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5f5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f5769 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5f576c 8bca            mov     ecx,edx
+00007ff8`7d5f576e c1f91f          sar     ecx,1Fh
+00007ff8`7d5f5771 83e103          and     ecx,3
+00007ff8`7d5f5774 03ca            add     ecx,edx
+00007ff8`7d5f5776 c1f902          sar     ecx,2
+00007ff8`7d5f5779 4533c0          xor     r8d,r8d
+00007ff8`7d5f577c 4533c9          xor     r9d,r9d
+00007ff8`7d5f577f 4533d2          xor     r10d,r10d
+00007ff8`7d5f5782 85c9            test    ecx,ecx
+00007ff8`7d5f5784 7e6c            jle     00007ff8`7d5f57f2
+00007ff8`7d5f5786 458bca          mov     r9d,r10d
+00007ff8`7d5f5789 41c1e102        shl     r9d,2
+00007ff8`7d5f578d 443bca          cmp     r9d,edx
+00007ff8`7d5f5790 0f8389000000    jae     00007ff8`7d5f581f
+00007ff8`7d5f5796 4d63d9          movsxd  r11,r9d
+00007ff8`7d5f5799 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f579f 4503c3          add     r8d,r11d
+00007ff8`7d5f57a2 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5f57a6 443bda          cmp     r11d,edx
+00007ff8`7d5f57a9 7374            jae     00007ff8`7d5f581f
+00007ff8`7d5f57ab 4d63db          movsxd  r11,r11d
+00007ff8`7d5f57ae 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f57b4 4503d8          add     r11d,r8d
+00007ff8`7d5f57b7 458bc3          mov     r8d,r11d
+00007ff8`7d5f57ba 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5f57be 443bda          cmp     r11d,edx
+00007ff8`7d5f57c1 735c            jae     00007ff8`7d5f581f
+00007ff8`7d5f57c3 4d63db          movsxd  r11,r11d
+00007ff8`7d5f57c6 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f57cc 4503d8          add     r11d,r8d
+00007ff8`7d5f57cf 458bc3          mov     r8d,r11d
+00007ff8`7d5f57d2 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5f57d6 443bda          cmp     r11d,edx
+00007ff8`7d5f57d9 7344            jae     00007ff8`7d5f581f
+00007ff8`7d5f57db 4d63db          movsxd  r11,r11d
+00007ff8`7d5f57de 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f57e4 4503d8          add     r11d,r8d
+00007ff8`7d5f57e7 458bc3          mov     r8d,r11d
+00007ff8`7d5f57ea 41ffc2          inc     r10d
+00007ff8`7d5f57ed 443bd1          cmp     r10d,ecx
+00007ff8`7d5f57f0 7c94            jl      00007ff8`7d5f5786
+00007ff8`7d5f57f2 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5f57fa 3bd1            cmp     edx,ecx
+00007ff8`7d5f57fc 7e19            jle     00007ff8`7d5f5817
+00007ff8`7d5f57fe 3bca            cmp     ecx,edx
+00007ff8`7d5f5800 731d            jae     00007ff8`7d5f581f
+00007ff8`7d5f5802 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f5805 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f580b 4503c8          add     r9d,r8d
+00007ff8`7d5f580e 458bc1          mov     r8d,r9d
+00007ff8`7d5f5811 ffc1            inc     ecx
+00007ff8`7d5f5813 3bd1            cmp     edx,ecx
+00007ff8`7d5f5815 7fe7            jg      00007ff8`7d5f57fe
+00007ff8`7d5f5817 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e9410 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5e9414 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5e9418 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5e941b 8bca            mov     ecx,edx
+00007ff8`7d5e941d c1f91f          sar     ecx,1Fh
+00007ff8`7d5e9420 83e103          and     ecx,3
+00007ff8`7d5e9423 03ca            add     ecx,edx
+00007ff8`7d5e9425 c1f902          sar     ecx,2
+00007ff8`7d5e9428 4533c0          xor     r8d,r8d
+00007ff8`7d5e942b 4533c9          xor     r9d,r9d
+00007ff8`7d5e942e 4533d2          xor     r10d,r10d
+00007ff8`7d5e9431 85c9            test    ecx,ecx
+00007ff8`7d5e9433 7e6c            jle     00007ff8`7d5e94a1
+00007ff8`7d5e9435 458bca          mov     r9d,r10d
+00007ff8`7d5e9438 41c1e102        shl     r9d,2
+00007ff8`7d5e943c 443bca          cmp     r9d,edx
+00007ff8`7d5e943f 0f8389000000    jae     00007ff8`7d5e94ce
+00007ff8`7d5e9445 4d63d9          movsxd  r11,r9d
+00007ff8`7d5e9448 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e944e 4503c3          add     r8d,r11d
+00007ff8`7d5e9451 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5e9455 443bda          cmp     r11d,edx
+00007ff8`7d5e9458 7374            jae     00007ff8`7d5e94ce
+00007ff8`7d5e945a 4d63db          movsxd  r11,r11d
+00007ff8`7d5e945d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e9463 4503d8          add     r11d,r8d
+00007ff8`7d5e9466 458bc3          mov     r8d,r11d
+00007ff8`7d5e9469 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5e946d 443bda          cmp     r11d,edx
+00007ff8`7d5e9470 735c            jae     00007ff8`7d5e94ce
+00007ff8`7d5e9472 4d63db          movsxd  r11,r11d
+00007ff8`7d5e9475 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e947b 4503d8          add     r11d,r8d
+00007ff8`7d5e947e 458bc3          mov     r8d,r11d
+00007ff8`7d5e9481 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5e9485 443bda          cmp     r11d,edx
+00007ff8`7d5e9488 7344            jae     00007ff8`7d5e94ce
+00007ff8`7d5e948a 4d63db          movsxd  r11,r11d
+00007ff8`7d5e948d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5e9493 4503d8          add     r11d,r8d
+00007ff8`7d5e9496 458bc3          mov     r8d,r11d
+00007ff8`7d5e9499 41ffc2          inc     r10d
+00007ff8`7d5e949c 443bd1          cmp     r10d,ecx
+00007ff8`7d5e949f 7c94            jl      00007ff8`7d5e9435
+00007ff8`7d5e94a1 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5e94a9 3bd1            cmp     edx,ecx
+00007ff8`7d5e94ab 7e19            jle     00007ff8`7d5e94c6
+00007ff8`7d5e94ad 3bca            cmp     ecx,edx
+00007ff8`7d5e94af 731d            jae     00007ff8`7d5e94ce
+00007ff8`7d5e94b1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e94b4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e94ba 4503c8          add     r9d,r8d
+00007ff8`7d5e94bd 458bc1          mov     r8d,r9d
+00007ff8`7d5e94c0 ffc1            inc     ecx
+00007ff8`7d5e94c2 3bd1            cmp     edx,ecx
+00007ff8`7d5e94c4 7fe7            jg      00007ff8`7d5e94ad
+00007ff8`7d5e94c6 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d5760 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5d5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5d5769 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5d576c 8bca            mov     ecx,edx
+00007ff8`7d5d576e c1f91f          sar     ecx,1Fh
+00007ff8`7d5d5771 83e103          and     ecx,3
+00007ff8`7d5d5774 03ca            add     ecx,edx
+00007ff8`7d5d5776 c1f902          sar     ecx,2
+00007ff8`7d5d5779 4533c0          xor     r8d,r8d
+00007ff8`7d5d577c 4533c9          xor     r9d,r9d
+00007ff8`7d5d577f 4533d2          xor     r10d,r10d
+00007ff8`7d5d5782 85c9            test    ecx,ecx
+00007ff8`7d5d5784 7e6c            jle     00007ff8`7d5d57f2
+00007ff8`7d5d5786 458bca          mov     r9d,r10d
+00007ff8`7d5d5789 41c1e102        shl     r9d,2
+00007ff8`7d5d578d 443bca          cmp     r9d,edx
+00007ff8`7d5d5790 0f8389000000    jae     00007ff8`7d5d581f
+00007ff8`7d5d5796 4d63d9          movsxd  r11,r9d
+00007ff8`7d5d5799 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d579f 4503c3          add     r8d,r11d
+00007ff8`7d5d57a2 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5d57a6 443bda          cmp     r11d,edx
+00007ff8`7d5d57a9 7374            jae     00007ff8`7d5d581f
+00007ff8`7d5d57ab 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57ae 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57b4 4503d8          add     r11d,r8d
+00007ff8`7d5d57b7 458bc3          mov     r8d,r11d
+00007ff8`7d5d57ba 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5d57be 443bda          cmp     r11d,edx
+00007ff8`7d5d57c1 735c            jae     00007ff8`7d5d581f
+00007ff8`7d5d57c3 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57c6 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57cc 4503d8          add     r11d,r8d
+00007ff8`7d5d57cf 458bc3          mov     r8d,r11d
+00007ff8`7d5d57d2 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5d57d6 443bda          cmp     r11d,edx
+00007ff8`7d5d57d9 7344            jae     00007ff8`7d5d581f
+00007ff8`7d5d57db 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57de 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57e4 4503d8          add     r11d,r8d
+00007ff8`7d5d57e7 458bc3          mov     r8d,r11d
+00007ff8`7d5d57ea 41ffc2          inc     r10d
+00007ff8`7d5d57ed 443bd1          cmp     r10d,ecx
+00007ff8`7d5d57f0 7c94            jl      00007ff8`7d5d5786
+00007ff8`7d5d57f2 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5d57fa 3bd1            cmp     edx,ecx
+00007ff8`7d5d57fc 7e19            jle     00007ff8`7d5d5817
+00007ff8`7d5d57fe 3bca            cmp     ecx,edx
+00007ff8`7d5d5800 731d            jae     00007ff8`7d5d581f
+00007ff8`7d5d5802 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d5805 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d580b 4503c8          add     r9d,r8d
+00007ff8`7d5d580e 458bc1          mov     r8d,r9d
+00007ff8`7d5d5811 ffc1            inc     ecx
+00007ff8`7d5d5813 3bd1            cmp     edx,ecx
+00007ff8`7d5d5815 7fe7            jg      00007ff8`7d5d57fe
+00007ff8`7d5d5817 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f9410 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5f9414 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5f9418 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5f941b 8bca            mov     ecx,edx
+00007ff8`7d5f941d c1f91f          sar     ecx,1Fh
+00007ff8`7d5f9420 83e103          and     ecx,3
+00007ff8`7d5f9423 03ca            add     ecx,edx
+00007ff8`7d5f9425 c1f902          sar     ecx,2
+00007ff8`7d5f9428 4533c0          xor     r8d,r8d
+00007ff8`7d5f942b 4533c9          xor     r9d,r9d
+00007ff8`7d5f942e 4533d2          xor     r10d,r10d
+00007ff8`7d5f9431 85c9            test    ecx,ecx
+00007ff8`7d5f9433 7e6c            jle     00007ff8`7d5f94a1
+00007ff8`7d5f9435 458bca          mov     r9d,r10d
+00007ff8`7d5f9438 41c1e102        shl     r9d,2
+00007ff8`7d5f943c 443bca          cmp     r9d,edx
+00007ff8`7d5f943f 0f8389000000    jae     00007ff8`7d5f94ce
+00007ff8`7d5f9445 4d63d9          movsxd  r11,r9d
+00007ff8`7d5f9448 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f944e 4503c3          add     r8d,r11d
+00007ff8`7d5f9451 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5f9455 443bda          cmp     r11d,edx
+00007ff8`7d5f9458 7374            jae     00007ff8`7d5f94ce
+00007ff8`7d5f945a 4d63db          movsxd  r11,r11d
+00007ff8`7d5f945d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f9463 4503d8          add     r11d,r8d
+00007ff8`7d5f9466 458bc3          mov     r8d,r11d
+00007ff8`7d5f9469 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5f946d 443bda          cmp     r11d,edx
+00007ff8`7d5f9470 735c            jae     00007ff8`7d5f94ce
+00007ff8`7d5f9472 4d63db          movsxd  r11,r11d
+00007ff8`7d5f9475 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f947b 4503d8          add     r11d,r8d
+00007ff8`7d5f947e 458bc3          mov     r8d,r11d
+00007ff8`7d5f9481 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5f9485 443bda          cmp     r11d,edx
+00007ff8`7d5f9488 7344            jae     00007ff8`7d5f94ce
+00007ff8`7d5f948a 4d63db          movsxd  r11,r11d
+00007ff8`7d5f948d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5f9493 4503d8          add     r11d,r8d
+00007ff8`7d5f9496 458bc3          mov     r8d,r11d
+00007ff8`7d5f9499 41ffc2          inc     r10d
+00007ff8`7d5f949c 443bd1          cmp     r10d,ecx
+00007ff8`7d5f949f 7c94            jl      00007ff8`7d5f9435
+00007ff8`7d5f94a1 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5f94a9 3bd1            cmp     edx,ecx
+00007ff8`7d5f94ab 7e19            jle     00007ff8`7d5f94c6
+00007ff8`7d5f94ad 3bca            cmp     ecx,edx
+00007ff8`7d5f94af 731d            jae     00007ff8`7d5f94ce
+00007ff8`7d5f94b1 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f94b4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f94ba 4503c8          add     r9d,r8d
+00007ff8`7d5f94bd 458bc1          mov     r8d,r9d
+00007ff8`7d5f94c0 ffc1            inc     ecx
+00007ff8`7d5f94c2 3bd1            cmp     edx,ecx
+00007ff8`7d5f94c4 7fe7            jg      00007ff8`7d5f94ad
+00007ff8`7d5f94c6 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d5760 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d5d5765 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d5d5769 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d5d576c 8bca            mov     ecx,edx
+00007ff8`7d5d576e c1f91f          sar     ecx,1Fh
+00007ff8`7d5d5771 83e103          and     ecx,3
+00007ff8`7d5d5774 03ca            add     ecx,edx
+00007ff8`7d5d5776 c1f902          sar     ecx,2
+00007ff8`7d5d5779 4533c0          xor     r8d,r8d
+00007ff8`7d5d577c 4533c9          xor     r9d,r9d
+00007ff8`7d5d577f 4533d2          xor     r10d,r10d
+00007ff8`7d5d5782 85c9            test    ecx,ecx
+00007ff8`7d5d5784 7e6c            jle     00007ff8`7d5d57f2
+00007ff8`7d5d5786 458bca          mov     r9d,r10d
+00007ff8`7d5d5789 41c1e102        shl     r9d,2
+00007ff8`7d5d578d 443bca          cmp     r9d,edx
+00007ff8`7d5d5790 0f8389000000    jae     00007ff8`7d5d581f
+00007ff8`7d5d5796 4d63d9          movsxd  r11,r9d
+00007ff8`7d5d5799 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d579f 4503c3          add     r8d,r11d
+00007ff8`7d5d57a2 458d5901        lea     r11d,[r9+1]
+00007ff8`7d5d57a6 443bda          cmp     r11d,edx
+00007ff8`7d5d57a9 7374            jae     00007ff8`7d5d581f
+00007ff8`7d5d57ab 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57ae 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57b4 4503d8          add     r11d,r8d
+00007ff8`7d5d57b7 458bc3          mov     r8d,r11d
+00007ff8`7d5d57ba 458d5902        lea     r11d,[r9+2]
+00007ff8`7d5d57be 443bda          cmp     r11d,edx
+00007ff8`7d5d57c1 735c            jae     00007ff8`7d5d581f
+00007ff8`7d5d57c3 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57c6 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57cc 4503d8          add     r11d,r8d
+00007ff8`7d5d57cf 458bc3          mov     r8d,r11d
+00007ff8`7d5d57d2 458d5903        lea     r11d,[r9+3]
+00007ff8`7d5d57d6 443bda          cmp     r11d,edx
+00007ff8`7d5d57d9 7344            jae     00007ff8`7d5d581f
+00007ff8`7d5d57db 4d63db          movsxd  r11,r11d
+00007ff8`7d5d57de 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d5d57e4 4503d8          add     r11d,r8d
+00007ff8`7d5d57e7 458bc3          mov     r8d,r11d
+00007ff8`7d5d57ea 41ffc2          inc     r10d
+00007ff8`7d5d57ed 443bd1          cmp     r10d,ecx
+00007ff8`7d5d57f0 7c94            jl      00007ff8`7d5d5786
+00007ff8`7d5d57f2 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d5d57fa 3bd1            cmp     edx,ecx
+00007ff8`7d5d57fc 7e19            jle     00007ff8`7d5d5817
+00007ff8`7d5d57fe 3bca            cmp     ecx,edx
+00007ff8`7d5d5800 731d            jae     00007ff8`7d5d581f
+00007ff8`7d5d5802 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d5805 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d580b 4503c8          add     r9d,r8d
+00007ff8`7d5d580e 458bc1          mov     r8d,r9d
+00007ff8`7d5d5811 ffc1            inc     ecx
+00007ff8`7d5d5813 3bd1            cmp     edx,ecx
+00007ff8`7d5d5815 7fe7            jg      00007ff8`7d5d57fe
+00007ff8`7d5d5817 418bc0          mov     eax,r8d
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d609410 Bdn1.LoopOverArrayOfBytes.ForLocalCachedUnrolled()
+00007ff8`7d609414 488b4108        mov     rax,qword ptr [rcx+8]
+00007ff8`7d609418 8b5008          mov     edx,dword ptr [rax+8]
+00007ff8`7d60941b 8bca            mov     ecx,edx
+00007ff8`7d60941d c1f91f          sar     ecx,1Fh
+00007ff8`7d609420 83e103          and     ecx,3
+00007ff8`7d609423 03ca            add     ecx,edx
+00007ff8`7d609425 c1f902          sar     ecx,2
+00007ff8`7d609428 4533c0          xor     r8d,r8d
+00007ff8`7d60942b 4533c9          xor     r9d,r9d
+00007ff8`7d60942e 4533d2          xor     r10d,r10d
+00007ff8`7d609431 85c9            test    ecx,ecx
+00007ff8`7d609433 7e6c            jle     00007ff8`7d6094a1
+00007ff8`7d609435 458bca          mov     r9d,r10d
+00007ff8`7d609438 41c1e102        shl     r9d,2
+00007ff8`7d60943c 443bca          cmp     r9d,edx
+00007ff8`7d60943f 0f8389000000    jae     00007ff8`7d6094ce
+00007ff8`7d609445 4d63d9          movsxd  r11,r9d
+00007ff8`7d609448 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d60944e 4503c3          add     r8d,r11d
+00007ff8`7d609451 458d5901        lea     r11d,[r9+1]
+00007ff8`7d609455 443bda          cmp     r11d,edx
+00007ff8`7d609458 7374            jae     00007ff8`7d6094ce
+00007ff8`7d60945a 4d63db          movsxd  r11,r11d
+00007ff8`7d60945d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d609463 4503d8          add     r11d,r8d
+00007ff8`7d609466 458bc3          mov     r8d,r11d
+00007ff8`7d609469 458d5902        lea     r11d,[r9+2]
+00007ff8`7d60946d 443bda          cmp     r11d,edx
+00007ff8`7d609470 735c            jae     00007ff8`7d6094ce
+00007ff8`7d609472 4d63db          movsxd  r11,r11d
+00007ff8`7d609475 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d60947b 4503d8          add     r11d,r8d
+00007ff8`7d60947e 458bc3          mov     r8d,r11d
+00007ff8`7d609481 458d5903        lea     r11d,[r9+3]
+00007ff8`7d609485 443bda          cmp     r11d,edx
+00007ff8`7d609488 7344            jae     00007ff8`7d6094ce
+00007ff8`7d60948a 4d63db          movsxd  r11,r11d
+00007ff8`7d60948d 460fb65c1810    movzx   r11d,byte ptr [rax+r11+10h]
+00007ff8`7d609493 4503d8          add     r11d,r8d
+00007ff8`7d609496 458bc3          mov     r8d,r11d
+00007ff8`7d609499 41ffc2          inc     r10d
+00007ff8`7d60949c 443bd1          cmp     r10d,ecx
+00007ff8`7d60949f 7c94            jl      00007ff8`7d609435
+00007ff8`7d6094a1 428d0c8d04000000 lea     ecx,[r9*4+4]
+00007ff8`7d6094a9 3bd1            cmp     edx,ecx
+00007ff8`7d6094ab 7e19            jle     00007ff8`7d6094c6
+00007ff8`7d6094ad 3bca            cmp     ecx,edx
+00007ff8`7d6094af 731d            jae     00007ff8`7d6094ce
+00007ff8`7d6094b1 4c63c9          movsxd  r9,ecx
+00007ff8`7d6094b4 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d6094ba 4503c8          add     r9d,r8d
+00007ff8`7d6094bd 458bc1          mov     r8d,r9d
+00007ff8`7d6094c0 ffc1            inc     ecx
+00007ff8`7d6094c2 3bd1            cmp     edx,ecx
+00007ff8`7d6094c4 7fe7            jg      00007ff8`7d6094ad
+00007ff8`7d6094c6 418bc0          mov     eax,r8d
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ListForeachSimple</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c59b0 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5c59c6 33f6            xor     esi,esi
+00007ff8`7d5c59c8 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5c59cc 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5c59ce 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5c59d1 33d2            xor     edx,edx
+00007ff8`7d5c59d3 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5c59d8 33c9            xor     ecx,ecx
+00007ff8`7d5c59da 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5c59de 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5c59e2 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5c59e6 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5c59eb e8d076dbff      call    00007ff8`7d37d0c0
+00007ff8`7d5c59f0 85c0            test    eax,eax
+00007ff8`7d5c59f2 7417            je      00007ff8`7d5c5a0b
+00007ff8`7d5c59f4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5c59f8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5c59fb 03f1            add     esi,ecx
+00007ff8`7d5c59fd 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5c5a02 e8b976dbff      call    00007ff8`7d37d0c0
+00007ff8`7d5c5a07 85c0            test    eax,eax
+00007ff8`7d5c5a09 75e9            jne     00007ff8`7d5c59f4
+00007ff8`7d5c5a0b 8bc6            mov     eax,esi
+
+00007ff8`dca8ed30 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5c925a 488b0b          mov     rcx,qword ptr [rbx]
+00007ff8`7d5c925d 8b430c          mov     eax,dword ptr [rbx+0Ch]
+00007ff8`7d5c9260 3b4114          cmp     eax,dword ptr [rcx+14h]
+00007ff8`7d5c9263 753e            jne     00007ff8`7d5c92a3
+00007ff8`7d5c9265 8b4308          mov     eax,dword ptr [rbx+8]
+00007ff8`7d5c9268 3b4110          cmp     eax,dword ptr [rcx+10h]
+00007ff8`7d5c926b 7336            jae     00007ff8`7d5c92a3
+00007ff8`7d5c926d 488d7b10        lea     rdi,[rbx+10h]
+00007ff8`7d5c9271 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5c9275 3b4108          cmp     eax,dword ptr [rcx+8]
+00007ff8`7d5c9278 7340            jae     00007ff8`7d5c92ba
+00007ff8`7d5c927a 4863c0          movsxd  rax,eax
+00007ff8`7d5c927d 488d0480        lea     rax,[rax+rax*4]
+00007ff8`7d5c9281 488d74c110      lea     rsi,[rcx+rax*8+10h]
+00007ff8`7d5c9286 e805a48d5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5c928b b904000000      mov     ecx,4
+00007ff8`7d5c9290 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5c9293 ff4308          inc     dword ptr [rbx+8]
+00007ff8`7d5c9296 b801000000      mov     eax,1
+00007ff8`7d5c929b 4883c420        add     rsp,20h
+00007ff8`7d5c929f 5b              pop     rbx
+00007ff8`7d5c92a0 5e              pop     rsi
+00007ff8`7d5c92a1 5f              pop     rdi
+00007ff8`7d5c92a2 c3              ret
+00007ff8`7d5c92a3 488bcb          mov     rcx,rbx
+00007ff8`7d5c92a6 48b848855c7df87f0000 mov rax,7FF87D5C8548h
+00007ff8`7d5c92b0 4883c420        add     rsp,20h
+00007ff8`7d5c92b4 5b              pop     rbx
+00007ff8`7d5c92b5 5e              pop     rsi
+00007ff8`7d5c92b6 5f              pop     rdi
+00007ff8`7d5c92b7 48ffe0          jmp     rax
+00007ff8`7d5c92ba e8415ca05f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5c92bf cc              int     3
+00007ff8`7d5c92c0 1907            sbb     dword ptr [rdi],eax
+00007ff8`7d5c92c2 0400            add     al,0
+00007ff8`7d5c92c4 07              ???
+00007ff8`7d5c92c5 3203            xor     al,byte ptr [rbx]
+00007ff8`7d5c92c7 3002            xor     byte ptr [rdx],al
+00007ff8`7d5c92c9 60              ???
+00007ff8`7d5c92ca 017040          add     dword ptr [rax+40h],esi
+00007ff8`7d5c92cd 0000            add     byte ptr [rax],al
+00007ff8`7d5c92cf 0000            add     byte ptr [rax],al
+00007ff8`7d5c92d1 0000            add     byte ptr [rax],al
+00007ff8`7d5c92d3 0000            add     byte ptr [rax],al
+00007ff8`7d5c92d5 0000            add     byte ptr [rax],al
+00007ff8`7d5c92d7 00e0            add     al,ah
+00007ff8`7d5c92d9 48              ???
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
 
 Abstract method
 System.IDisposable.Dispose()
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca596f0 Bdn1.LoopOverArrayOfBytes.ListForSimple()
-00007ffd`aca596f4 33c0            xor     eax,eax
-00007ffd`aca596f6 33d2            xor     edx,edx
-00007ffd`aca596f8 eb22            jmp     00007ffd`aca5971c
-00007ffd`aca596fa 4c8b4110        mov     r8,qword ptr [rcx+10h]
-00007ffd`aca596fe 413b5010        cmp     edx,dword ptr [r8+10h]
-00007ffd`aca59702 7327            jae     00007ffd`aca5972b
-00007ffd`aca59704 4d8b4008        mov     r8,qword ptr [r8+8]
-00007ffd`aca59708 413b5008        cmp     edx,dword ptr [r8+8]
-00007ffd`aca5970c 7323            jae     00007ffd`aca59731
-00007ffd`aca5970e 4c63ca          movsxd  r9,edx
-00007ffd`aca59711 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
-00007ffd`aca59717 4103c0          add     eax,r8d
-00007ffd`aca5971a ffc2            inc     edx
-00007ffd`aca5971c 4c8b4110        mov     r8,qword ptr [rcx+10h]
-00007ffd`aca59720 413b5010        cmp     edx,dword ptr [r8+10h]
-00007ffd`aca59724 7cd4            jl      00007ffd`aca596fa
-00007ffd`aca59726 4883c428        add     rsp,28h
-00007ffd`aca5972a c3              ret
-00007ffd`aca5972b e8d0efdaff      call    00007ffd`ac808700
-00007ffd`aca59730 cc              int     3
+00007ff8`7d5e9660 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5e9676 33f6            xor     esi,esi
+00007ff8`7d5e9678 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5e967c 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5e967e 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5e9681 33d2            xor     edx,edx
+00007ff8`7d5e9683 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5e9688 33c9            xor     ecx,ecx
+00007ff8`7d5e968a 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5e968e 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5e9692 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5e9696 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e969b e8e041d9ff      call    00007ff8`7d37d880
+00007ff8`7d5e96a0 85c0            test    eax,eax
+00007ff8`7d5e96a2 7417            je      00007ff8`7d5e96bb
+00007ff8`7d5e96a4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5e96a8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5e96ab 03f1            add     esi,ecx
+00007ff8`7d5e96ad 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e96b2 e8c941d9ff      call    00007ff8`7d37d880
+00007ff8`7d5e96b7 85c0            test    eax,eax
+00007ff8`7d5e96b9 75e9            jne     00007ff8`7d5e96a4
+00007ff8`7d5e96bb 8bc6            mov     eax,esi
+
+00007ff8`7d5eb110 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5ed646 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed64a 488b09          mov     rcx,qword ptr [rcx]
+00007ff8`7d5ed64d 48894de8        mov     qword ptr [rbp-18h],rcx
+00007ff8`7d5ed651 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed655 8b490c          mov     ecx,dword ptr [rcx+0Ch]
+00007ff8`7d5ed658 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5ed65c 3b4814          cmp     ecx,dword ptr [rax+14h]
+00007ff8`7d5ed65f 7558            jne     00007ff8`7d5ed6b9
+00007ff8`7d5ed661 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed665 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5ed668 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5ed66c 3b4810          cmp     ecx,dword ptr [rax+10h]
+00007ff8`7d5ed66f 7348            jae     00007ff8`7d5ed6b9
+00007ff8`7d5ed671 488b4de8        mov     rcx,qword ptr [rbp-18h]
+00007ff8`7d5ed675 488b7108        mov     rsi,qword ptr [rcx+8]
+00007ff8`7d5ed679 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed67d 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5ed680 3b4e08          cmp     ecx,dword ptr [rsi+8]
+00007ff8`7d5ed683 7346            jae     00007ff8`7d5ed6cb
+00007ff8`7d5ed685 8bc1            mov     eax,ecx
+00007ff8`7d5ed687 486bc028        imul    rax,rax,28h
+00007ff8`7d5ed68b 488d740610      lea     rsi,[rsi+rax+10h]
+00007ff8`7d5ed690 488b7d10        mov     rdi,qword ptr [rbp+10h]
+00007ff8`7d5ed694 4883c710        add     rdi,10h
+00007ff8`7d5ed698 e8f35f8b5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5ed69d b904000000      mov     ecx,4
+00007ff8`7d5ed6a2 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5ed6a5 488b4510        mov     rax,qword ptr [rbp+10h]
+00007ff8`7d5ed6a9 ff4008          inc     dword ptr [rax+8]
+00007ff8`7d5ed6ac b801000000      mov     eax,1
+00007ff8`7d5ed6b1 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5ed6b5 5e              pop     rsi
+00007ff8`7d5ed6b6 5f              pop     rdi
+00007ff8`7d5ed6b7 5d              pop     rbp
+00007ff8`7d5ed6b8 c3              ret
+00007ff8`7d5ed6b9 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed6bd e8fee7ffff      call    00007ff8`7d5ebec0
+00007ff8`7d5ed6c2 90              nop
+00007ff8`7d5ed6c3 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5ed6c7 5e              pop     rsi
+00007ff8`7d5ed6c8 5f              pop     rdi
+00007ff8`7d5ed6c9 5d              pop     rbp
+00007ff8`7d5ed6ca c3              ret
+00007ff8`7d5ed6cb e830189e5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5ed6d0 cc              int     3
+00007ff8`7d5ed6d1 0000            add     byte ptr [rax],al
+00007ff8`7d5ed6d3 0019            add     byte ptr [rcx],bl
+00007ff8`7d5ed6d5 07              ???
+00007ff8`7d5ed6d6 0400            add     al,0
+00007ff8`7d5ed6d8 07              ???
+00007ff8`7d5ed6d9 52              push    rdx
+00007ff8`7d5ed6da 036002          add     esp,dword ptr [rax+2]
+00007ff8`7d5ed6dd 7001            jo      00007ff8`7d5ed6e0
+00007ff8`7d5ed6df 50              push    rax
+00007ff8`7d5ed6e0 400000          add     byte ptr [rax],al
+00007ff8`7d5ed6e3 0000            add     byte ptr [rax],al
+00007ff8`7d5ed6e5 0000            add     byte ptr [rax],al
+00007ff8`7d5ed6e7 0000            add     byte ptr [rax],al
+00007ff8`7d5ed6e9 80667df8        and     byte ptr [rsi+7Dh],0F8h
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f59b0 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5f59c6 33f6            xor     esi,esi
+00007ff8`7d5f59c8 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5f59cc 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5f59ce 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5f59d1 33d2            xor     edx,edx
+00007ff8`7d5f59d3 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5f59d8 33c9            xor     ecx,ecx
+00007ff8`7d5f59da 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5f59de 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5f59e2 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5f59e6 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5f59eb e8d076dbff      call    00007ff8`7d3ad0c0
+00007ff8`7d5f59f0 85c0            test    eax,eax
+00007ff8`7d5f59f2 7417            je      00007ff8`7d5f5a0b
+00007ff8`7d5f59f4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5f59f8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5f59fb 03f1            add     esi,ecx
+00007ff8`7d5f59fd 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5f5a02 e8b976dbff      call    00007ff8`7d3ad0c0
+00007ff8`7d5f5a07 85c0            test    eax,eax
+00007ff8`7d5f5a09 75e9            jne     00007ff8`7d5f59f4
+00007ff8`7d5f5a0b 8bc6            mov     eax,esi
+
+00007ff8`dca8ed30 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5f925a 488b0b          mov     rcx,qword ptr [rbx]
+00007ff8`7d5f925d 8b430c          mov     eax,dword ptr [rbx+0Ch]
+00007ff8`7d5f9260 3b4114          cmp     eax,dword ptr [rcx+14h]
+00007ff8`7d5f9263 753e            jne     00007ff8`7d5f92a3
+00007ff8`7d5f9265 8b4308          mov     eax,dword ptr [rbx+8]
+00007ff8`7d5f9268 3b4110          cmp     eax,dword ptr [rcx+10h]
+00007ff8`7d5f926b 7336            jae     00007ff8`7d5f92a3
+00007ff8`7d5f926d 488d7b10        lea     rdi,[rbx+10h]
+00007ff8`7d5f9271 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5f9275 3b4108          cmp     eax,dword ptr [rcx+8]
+00007ff8`7d5f9278 7340            jae     00007ff8`7d5f92ba
+00007ff8`7d5f927a 4863c0          movsxd  rax,eax
+00007ff8`7d5f927d 488d0480        lea     rax,[rax+rax*4]
+00007ff8`7d5f9281 488d74c110      lea     rsi,[rcx+rax*8+10h]
+00007ff8`7d5f9286 e805a48a5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5f928b b904000000      mov     ecx,4
+00007ff8`7d5f9290 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5f9293 ff4308          inc     dword ptr [rbx+8]
+00007ff8`7d5f9296 b801000000      mov     eax,1
+00007ff8`7d5f929b 4883c420        add     rsp,20h
+00007ff8`7d5f929f 5b              pop     rbx
+00007ff8`7d5f92a0 5e              pop     rsi
+00007ff8`7d5f92a1 5f              pop     rdi
+00007ff8`7d5f92a2 c3              ret
+00007ff8`7d5f92a3 488bcb          mov     rcx,rbx
+00007ff8`7d5f92a6 48b848855f7df87f0000 mov rax,7FF87D5F8548h
+00007ff8`7d5f92b0 4883c420        add     rsp,20h
+00007ff8`7d5f92b4 5b              pop     rbx
+00007ff8`7d5f92b5 5e              pop     rsi
+00007ff8`7d5f92b6 5f              pop     rdi
+00007ff8`7d5f92b7 48ffe0          jmp     rax
+00007ff8`7d5f92ba e8415c9d5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5f92bf cc              int     3
+00007ff8`7d5f92c0 1907            sbb     dword ptr [rdi],eax
+00007ff8`7d5f92c2 0400            add     al,0
+00007ff8`7d5f92c4 07              ???
+00007ff8`7d5f92c5 3203            xor     al,byte ptr [rbx]
+00007ff8`7d5f92c7 3002            xor     byte ptr [rdx],al
+00007ff8`7d5f92c9 60              ???
+00007ff8`7d5f92ca 017040          add     dword ptr [rax+40h],esi
+00007ff8`7d5f92cd 0000            add     byte ptr [rax],al
+00007ff8`7d5f92cf 0000            add     byte ptr [rax],al
+00007ff8`7d5f92d1 0000            add     byte ptr [rax],al
+00007ff8`7d5f92d3 0000            add     byte ptr [rax],al
+00007ff8`7d5f92d5 0000            add     byte ptr [rax],al
+00007ff8`7d5f92d7 00e0            add     al,ah
+00007ff8`7d5f92d9 48687df87f00    push    7FF87Dh
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d9940 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5d9956 33f6            xor     esi,esi
+00007ff8`7d5d9958 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5d995c 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5d995e 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5d9961 33d2            xor     edx,edx
+00007ff8`7d5d9963 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5d9968 33c9            xor     ecx,ecx
+00007ff8`7d5d996a 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5d996e 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5d9972 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5d9976 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5d997b e8003fd9ff      call    00007ff8`7d36d880
+00007ff8`7d5d9980 85c0            test    eax,eax
+00007ff8`7d5d9982 7417            je      00007ff8`7d5d999b
+00007ff8`7d5d9984 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5d9988 0fb6c9          movzx   ecx,cl
+00007ff8`7d5d998b 03f1            add     esi,ecx
+00007ff8`7d5d998d 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5d9992 e8e93ed9ff      call    00007ff8`7d36d880
+00007ff8`7d5d9997 85c0            test    eax,eax
+00007ff8`7d5d9999 75e9            jne     00007ff8`7d5d9984
+00007ff8`7d5d999b 8bc6            mov     eax,esi
+
+00007ff8`7d5dafe0 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5dd8b6 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5dd8ba 488b09          mov     rcx,qword ptr [rcx]
+00007ff8`7d5dd8bd 48894de8        mov     qword ptr [rbp-18h],rcx
+00007ff8`7d5dd8c1 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5dd8c5 8b490c          mov     ecx,dword ptr [rcx+0Ch]
+00007ff8`7d5dd8c8 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5dd8cc 3b4814          cmp     ecx,dword ptr [rax+14h]
+00007ff8`7d5dd8cf 7558            jne     00007ff8`7d5dd929
+00007ff8`7d5dd8d1 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5dd8d5 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5dd8d8 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5dd8dc 3b4810          cmp     ecx,dword ptr [rax+10h]
+00007ff8`7d5dd8df 7348            jae     00007ff8`7d5dd929
+00007ff8`7d5dd8e1 488b4de8        mov     rcx,qword ptr [rbp-18h]
+00007ff8`7d5dd8e5 488b7108        mov     rsi,qword ptr [rcx+8]
+00007ff8`7d5dd8e9 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5dd8ed 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5dd8f0 3b4e08          cmp     ecx,dword ptr [rsi+8]
+00007ff8`7d5dd8f3 7346            jae     00007ff8`7d5dd93b
+00007ff8`7d5dd8f5 8bc1            mov     eax,ecx
+00007ff8`7d5dd8f7 486bc028        imul    rax,rax,28h
+00007ff8`7d5dd8fb 488d740610      lea     rsi,[rsi+rax+10h]
+00007ff8`7d5dd900 488b7d10        mov     rdi,qword ptr [rbp+10h]
+00007ff8`7d5dd904 4883c710        add     rdi,10h
+00007ff8`7d5dd908 e8835d8c5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5dd90d b904000000      mov     ecx,4
+00007ff8`7d5dd912 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5dd915 488b4510        mov     rax,qword ptr [rbp+10h]
+00007ff8`7d5dd919 ff4008          inc     dword ptr [rax+8]
+00007ff8`7d5dd91c b801000000      mov     eax,1
+00007ff8`7d5dd921 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5dd925 5e              pop     rsi
+00007ff8`7d5dd926 5f              pop     rdi
+00007ff8`7d5dd927 5d              pop     rbp
+00007ff8`7d5dd928 c3              ret
+00007ff8`7d5dd929 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5dd92d e836f2ffff      call    00007ff8`7d5dcb68
+00007ff8`7d5dd932 90              nop
+00007ff8`7d5dd933 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5dd937 5e              pop     rsi
+00007ff8`7d5dd938 5f              pop     rdi
+00007ff8`7d5dd939 5d              pop     rbp
+00007ff8`7d5dd93a c3              ret
+00007ff8`7d5dd93b e8c0159f5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5dd940 cc              int     3
+00007ff8`7d5dd941 0000            add     byte ptr [rax],al
+00007ff8`7d5dd943 0019            add     byte ptr [rcx],bl
+00007ff8`7d5dd945 07              ???
+00007ff8`7d5dd946 0400            add     al,0
+00007ff8`7d5dd948 07              ???
+00007ff8`7d5dd949 52              push    rdx
+00007ff8`7d5dd94a 036002          add     esp,dword ptr [rax+2]
+00007ff8`7d5dd94d 7001            jo      00007ff8`7d5dd950
+00007ff8`7d5dd94f 50              push    rax
+00007ff8`7d5dd950 400000          add     byte ptr [rax],al
+00007ff8`7d5dd953 0000            add     byte ptr [rax],al
+00007ff8`7d5dd955 0000            add     byte ptr [rax],al
+00007ff8`7d5dd957 00707f          add     byte ptr [rax+7Fh],dh
+00007ff8`7d5dd95a 657df8          jge     00007ff8`7d5dd955
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d59b0 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5d59c6 33f6            xor     esi,esi
+00007ff8`7d5d59c8 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5d59cc 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5d59ce 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5d59d1 33d2            xor     edx,edx
+00007ff8`7d5d59d3 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5d59d8 33c9            xor     ecx,ecx
+00007ff8`7d5d59da 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5d59de 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5d59e2 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5d59e6 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5d59eb e8d076dbff      call    00007ff8`7d38d0c0
+00007ff8`7d5d59f0 85c0            test    eax,eax
+00007ff8`7d5d59f2 7417            je      00007ff8`7d5d5a0b
+00007ff8`7d5d59f4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5d59f8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5d59fb 03f1            add     esi,ecx
+00007ff8`7d5d59fd 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5d5a02 e8b976dbff      call    00007ff8`7d38d0c0
+00007ff8`7d5d5a07 85c0            test    eax,eax
+00007ff8`7d5d5a09 75e9            jne     00007ff8`7d5d59f4
+00007ff8`7d5d5a0b 8bc6            mov     eax,esi
+
+00007ff8`dca8ed30 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5d925a 488b0b          mov     rcx,qword ptr [rbx]
+00007ff8`7d5d925d 8b430c          mov     eax,dword ptr [rbx+0Ch]
+00007ff8`7d5d9260 3b4114          cmp     eax,dword ptr [rcx+14h]
+00007ff8`7d5d9263 753e            jne     00007ff8`7d5d92a3
+00007ff8`7d5d9265 8b4308          mov     eax,dword ptr [rbx+8]
+00007ff8`7d5d9268 3b4110          cmp     eax,dword ptr [rcx+10h]
+00007ff8`7d5d926b 7336            jae     00007ff8`7d5d92a3
+00007ff8`7d5d926d 488d7b10        lea     rdi,[rbx+10h]
+00007ff8`7d5d9271 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5d9275 3b4108          cmp     eax,dword ptr [rcx+8]
+00007ff8`7d5d9278 7340            jae     00007ff8`7d5d92ba
+00007ff8`7d5d927a 4863c0          movsxd  rax,eax
+00007ff8`7d5d927d 488d0480        lea     rax,[rax+rax*4]
+00007ff8`7d5d9281 488d74c110      lea     rsi,[rcx+rax*8+10h]
+00007ff8`7d5d9286 e805a48c5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5d928b b904000000      mov     ecx,4
+00007ff8`7d5d9290 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5d9293 ff4308          inc     dword ptr [rbx+8]
+00007ff8`7d5d9296 b801000000      mov     eax,1
+00007ff8`7d5d929b 4883c420        add     rsp,20h
+00007ff8`7d5d929f 5b              pop     rbx
+00007ff8`7d5d92a0 5e              pop     rsi
+00007ff8`7d5d92a1 5f              pop     rdi
+00007ff8`7d5d92a2 c3              ret
+00007ff8`7d5d92a3 488bcb          mov     rcx,rbx
+00007ff8`7d5d92a6 48b848855d7df87f0000 mov rax,7FF87D5D8548h
+00007ff8`7d5d92b0 4883c420        add     rsp,20h
+00007ff8`7d5d92b4 5b              pop     rbx
+00007ff8`7d5d92b5 5e              pop     rsi
+00007ff8`7d5d92b6 5f              pop     rdi
+00007ff8`7d5d92b7 48ffe0          jmp     rax
+00007ff8`7d5d92ba e8415c9f5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5d92bf cc              int     3
+00007ff8`7d5d92c0 1907            sbb     dword ptr [rdi],eax
+00007ff8`7d5d92c2 0400            add     al,0
+00007ff8`7d5d92c4 07              ???
+00007ff8`7d5d92c5 3203            xor     al,byte ptr [rbx]
+00007ff8`7d5d92c7 3002            xor     byte ptr [rdx],al
+00007ff8`7d5d92c9 60              ???
+00007ff8`7d5d92ca 017040          add     dword ptr [rax+40h],esi
+00007ff8`7d5d92cd 0000            add     byte ptr [rax],al
+00007ff8`7d5d92cf 0000            add     byte ptr [rax],al
+00007ff8`7d5d92d1 0000            add     byte ptr [rax],al
+00007ff8`7d5d92d3 0000            add     byte ptr [rax],al
+00007ff8`7d5d92d5 0000            add     byte ptr [rax],al
+00007ff8`7d5d92d7 00e0            add     al,ah
+00007ff8`7d5d92d9 48              ???
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f9660 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5f9676 33f6            xor     esi,esi
+00007ff8`7d5f9678 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5f967c 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5f967e 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5f9681 33d2            xor     edx,edx
+00007ff8`7d5f9683 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5f9688 33c9            xor     ecx,ecx
+00007ff8`7d5f968a 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5f968e 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5f9692 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5f9696 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5f969b e8e041d9ff      call    00007ff8`7d38d880
+00007ff8`7d5f96a0 85c0            test    eax,eax
+00007ff8`7d5f96a2 7417            je      00007ff8`7d5f96bb
+00007ff8`7d5f96a4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5f96a8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5f96ab 03f1            add     esi,ecx
+00007ff8`7d5f96ad 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5f96b2 e8c941d9ff      call    00007ff8`7d38d880
+00007ff8`7d5f96b7 85c0            test    eax,eax
+00007ff8`7d5f96b9 75e9            jne     00007ff8`7d5f96a4
+00007ff8`7d5f96bb 8bc6            mov     eax,esi
+
+00007ff8`7d5fb110 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5fd5e6 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5fd5ea 488b09          mov     rcx,qword ptr [rcx]
+00007ff8`7d5fd5ed 48894de8        mov     qword ptr [rbp-18h],rcx
+00007ff8`7d5fd5f1 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5fd5f5 8b490c          mov     ecx,dword ptr [rcx+0Ch]
+00007ff8`7d5fd5f8 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5fd5fc 3b4814          cmp     ecx,dword ptr [rax+14h]
+00007ff8`7d5fd5ff 7558            jne     00007ff8`7d5fd659
+00007ff8`7d5fd601 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5fd605 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5fd608 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5fd60c 3b4810          cmp     ecx,dword ptr [rax+10h]
+00007ff8`7d5fd60f 7348            jae     00007ff8`7d5fd659
+00007ff8`7d5fd611 488b4de8        mov     rcx,qword ptr [rbp-18h]
+00007ff8`7d5fd615 488b7108        mov     rsi,qword ptr [rcx+8]
+00007ff8`7d5fd619 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5fd61d 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5fd620 3b4e08          cmp     ecx,dword ptr [rsi+8]
+00007ff8`7d5fd623 7346            jae     00007ff8`7d5fd66b
+00007ff8`7d5fd625 8bc1            mov     eax,ecx
+00007ff8`7d5fd627 486bc028        imul    rax,rax,28h
+00007ff8`7d5fd62b 488d740610      lea     rsi,[rsi+rax+10h]
+00007ff8`7d5fd630 488b7d10        mov     rdi,qword ptr [rbp+10h]
+00007ff8`7d5fd634 4883c710        add     rdi,10h
+00007ff8`7d5fd638 e853608a5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5fd63d b904000000      mov     ecx,4
+00007ff8`7d5fd642 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5fd645 488b4510        mov     rax,qword ptr [rbp+10h]
+00007ff8`7d5fd649 ff4008          inc     dword ptr [rax+8]
+00007ff8`7d5fd64c b801000000      mov     eax,1
+00007ff8`7d5fd651 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5fd655 5e              pop     rsi
+00007ff8`7d5fd656 5f              pop     rdi
+00007ff8`7d5fd657 5d              pop     rbp
+00007ff8`7d5fd658 c3              ret
+00007ff8`7d5fd659 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5fd65d e8fee7ffff      call    00007ff8`7d5fbe60
+00007ff8`7d5fd662 90              nop
+00007ff8`7d5fd663 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5fd667 5e              pop     rsi
+00007ff8`7d5fd668 5f              pop     rdi
+00007ff8`7d5fd669 5d              pop     rbp
+00007ff8`7d5fd66a c3              ret
+00007ff8`7d5fd66b e890189d5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5fd670 cc              int     3
+00007ff8`7d5fd671 0000            add     byte ptr [rax],al
+00007ff8`7d5fd673 0019            add     byte ptr [rcx],bl
+00007ff8`7d5fd675 07              ???
+00007ff8`7d5fd676 0400            add     al,0
+00007ff8`7d5fd678 07              ???
+00007ff8`7d5fd679 52              push    rdx
+00007ff8`7d5fd67a 036002          add     esp,dword ptr [rax+2]
+00007ff8`7d5fd67d 7001            jo      00007ff8`7d5fd680
+00007ff8`7d5fd67f 50              push    rax
+00007ff8`7d5fd680 400000          add     byte ptr [rax],al
+00007ff8`7d5fd683 0000            add     byte ptr [rax],al
+00007ff8`7d5fd685 0000            add     byte ptr [rax],al
+00007ff8`7d5fd687 00707f          add     byte ptr [rax+7Fh],dh
+00007ff8`7d5fd68a 677df8          jge     00007ff8`7d5fd685
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e59b0 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5e59c6 33f6            xor     esi,esi
+00007ff8`7d5e59c8 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5e59cc 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5e59ce 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5e59d1 33d2            xor     edx,edx
+00007ff8`7d5e59d3 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5e59d8 33c9            xor     ecx,ecx
+00007ff8`7d5e59da 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5e59de 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5e59e2 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5e59e6 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e59eb e8d076dbff      call    00007ff8`7d39d0c0
+00007ff8`7d5e59f0 85c0            test    eax,eax
+00007ff8`7d5e59f2 7417            je      00007ff8`7d5e5a0b
+00007ff8`7d5e59f4 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5e59f8 0fb6c9          movzx   ecx,cl
+00007ff8`7d5e59fb 03f1            add     esi,ecx
+00007ff8`7d5e59fd 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e5a02 e8b976dbff      call    00007ff8`7d39d0c0
+00007ff8`7d5e5a07 85c0            test    eax,eax
+00007ff8`7d5e5a09 75e9            jne     00007ff8`7d5e59f4
+00007ff8`7d5e5a0b 8bc6            mov     eax,esi
+
+00007ff8`dca8ed30 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5e925a 488b0b          mov     rcx,qword ptr [rbx]
+00007ff8`7d5e925d 8b430c          mov     eax,dword ptr [rbx+0Ch]
+00007ff8`7d5e9260 3b4114          cmp     eax,dword ptr [rcx+14h]
+00007ff8`7d5e9263 753e            jne     00007ff8`7d5e92a3
+00007ff8`7d5e9265 8b4308          mov     eax,dword ptr [rbx+8]
+00007ff8`7d5e9268 3b4110          cmp     eax,dword ptr [rcx+10h]
+00007ff8`7d5e926b 7336            jae     00007ff8`7d5e92a3
+00007ff8`7d5e926d 488d7b10        lea     rdi,[rbx+10h]
+00007ff8`7d5e9271 488b4908        mov     rcx,qword ptr [rcx+8]
+00007ff8`7d5e9275 3b4108          cmp     eax,dword ptr [rcx+8]
+00007ff8`7d5e9278 7340            jae     00007ff8`7d5e92ba
+00007ff8`7d5e927a 4863c0          movsxd  rax,eax
+00007ff8`7d5e927d 488d0480        lea     rax,[rax+rax*4]
+00007ff8`7d5e9281 488d74c110      lea     rsi,[rcx+rax*8+10h]
+00007ff8`7d5e9286 e805a48b5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5e928b b904000000      mov     ecx,4
+00007ff8`7d5e9290 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5e9293 ff4308          inc     dword ptr [rbx+8]
+00007ff8`7d5e9296 b801000000      mov     eax,1
+00007ff8`7d5e929b 4883c420        add     rsp,20h
+00007ff8`7d5e929f 5b              pop     rbx
+00007ff8`7d5e92a0 5e              pop     rsi
+00007ff8`7d5e92a1 5f              pop     rdi
+00007ff8`7d5e92a2 c3              ret
+00007ff8`7d5e92a3 488bcb          mov     rcx,rbx
+00007ff8`7d5e92a6 48b848855e7df87f0000 mov rax,7FF87D5E8548h
+00007ff8`7d5e92b0 4883c420        add     rsp,20h
+00007ff8`7d5e92b4 5b              pop     rbx
+00007ff8`7d5e92b5 5e              pop     rsi
+00007ff8`7d5e92b6 5f              pop     rdi
+00007ff8`7d5e92b7 48ffe0          jmp     rax
+00007ff8`7d5e92ba e8415c9e5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5e92bf cc              int     3
+00007ff8`7d5e92c0 1907            sbb     dword ptr [rdi],eax
+00007ff8`7d5e92c2 0400            add     al,0
+00007ff8`7d5e92c4 07              ???
+00007ff8`7d5e92c5 3203            xor     al,byte ptr [rbx]
+00007ff8`7d5e92c7 3002            xor     byte ptr [rdx],al
+00007ff8`7d5e92c9 60              ???
+00007ff8`7d5e92ca 017040          add     dword ptr [rax+40h],esi
+00007ff8`7d5e92cd 0000            add     byte ptr [rax],al
+00007ff8`7d5e92cf 0000            add     byte ptr [rax],al
+00007ff8`7d5e92d1 0000            add     byte ptr [rax],al
+00007ff8`7d5e92d3 0000            add     byte ptr [rax],al
+00007ff8`7d5e92d5 0000            add     byte ptr [rax],al
+00007ff8`7d5e92d7 00e0            add     al,ah
+00007ff8`7d5e92d9 48              ???
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e9940 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()
+00007ff8`7d5e9956 33f6            xor     esi,esi
+00007ff8`7d5e9958 488b4910        mov     rcx,qword ptr [rcx+10h]
+00007ff8`7d5e995c 8b01            mov     eax,dword ptr [rcx]
+00007ff8`7d5e995e 8b4114          mov     eax,dword ptr [rcx+14h]
+00007ff8`7d5e9961 33d2            xor     edx,edx
+00007ff8`7d5e9963 48894c2428      mov     qword ptr [rsp+28h],rcx
+00007ff8`7d5e9968 33c9            xor     ecx,ecx
+00007ff8`7d5e996a 894c2430        mov     dword ptr [rsp+30h],ecx
+00007ff8`7d5e996e 89442434        mov     dword ptr [rsp+34h],eax
+00007ff8`7d5e9972 88542438        mov     byte ptr [rsp+38h],dl
+00007ff8`7d5e9976 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e997b e8003fd9ff      call    00007ff8`7d37d880
+00007ff8`7d5e9980 85c0            test    eax,eax
+00007ff8`7d5e9982 7417            je      00007ff8`7d5e999b
+00007ff8`7d5e9984 8b4c2438        mov     ecx,dword ptr [rsp+38h]
+00007ff8`7d5e9988 0fb6c9          movzx   ecx,cl
+00007ff8`7d5e998b 03f1            add     esi,ecx
+00007ff8`7d5e998d 488d4c2428      lea     rcx,[rsp+28h]
+00007ff8`7d5e9992 e8e93ed9ff      call    00007ff8`7d37d880
+00007ff8`7d5e9997 85c0            test    eax,eax
+00007ff8`7d5e9999 75e9            jne     00007ff8`7d5e9984
+00007ff8`7d5e999b 8bc6            mov     eax,esi
+
+00007ff8`7d5eafe0 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()
+00007ff8`7d5ed8b6 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed8ba 488b09          mov     rcx,qword ptr [rcx]
+00007ff8`7d5ed8bd 48894de8        mov     qword ptr [rbp-18h],rcx
+00007ff8`7d5ed8c1 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed8c5 8b490c          mov     ecx,dword ptr [rcx+0Ch]
+00007ff8`7d5ed8c8 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5ed8cc 3b4814          cmp     ecx,dword ptr [rax+14h]
+00007ff8`7d5ed8cf 7558            jne     00007ff8`7d5ed929
+00007ff8`7d5ed8d1 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed8d5 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5ed8d8 488b45e8        mov     rax,qword ptr [rbp-18h]
+00007ff8`7d5ed8dc 3b4810          cmp     ecx,dword ptr [rax+10h]
+00007ff8`7d5ed8df 7348            jae     00007ff8`7d5ed929
+00007ff8`7d5ed8e1 488b4de8        mov     rcx,qword ptr [rbp-18h]
+00007ff8`7d5ed8e5 488b7108        mov     rsi,qword ptr [rcx+8]
+00007ff8`7d5ed8e9 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed8ed 8b4908          mov     ecx,dword ptr [rcx+8]
+00007ff8`7d5ed8f0 3b4e08          cmp     ecx,dword ptr [rsi+8]
+00007ff8`7d5ed8f3 7346            jae     00007ff8`7d5ed93b
+00007ff8`7d5ed8f5 8bc1            mov     eax,ecx
+00007ff8`7d5ed8f7 486bc028        imul    rax,rax,28h
+00007ff8`7d5ed8fb 488d740610      lea     rsi,[rsi+rax+10h]
+00007ff8`7d5ed900 488b7d10        mov     rdi,qword ptr [rbp+10h]
+00007ff8`7d5ed904 4883c710        add     rdi,10h
+00007ff8`7d5ed908 e8835d8b5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ff8`dcea3690)
+00007ff8`7d5ed90d b904000000      mov     ecx,4
+00007ff8`7d5ed912 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]
+00007ff8`7d5ed915 488b4510        mov     rax,qword ptr [rbp+10h]
+00007ff8`7d5ed919 ff4008          inc     dword ptr [rax+8]
+00007ff8`7d5ed91c b801000000      mov     eax,1
+00007ff8`7d5ed921 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5ed925 5e              pop     rsi
+00007ff8`7d5ed926 5f              pop     rdi
+00007ff8`7d5ed927 5d              pop     rbp
+00007ff8`7d5ed928 c3              ret
+00007ff8`7d5ed929 488b4d10        mov     rcx,qword ptr [rbp+10h]
+00007ff8`7d5ed92d e836f2ffff      call    00007ff8`7d5ecb68
+00007ff8`7d5ed932 90              nop
+00007ff8`7d5ed933 488d65f0        lea     rsp,[rbp-10h]
+00007ff8`7d5ed937 5e              pop     rsi
+00007ff8`7d5ed938 5f              pop     rdi
+00007ff8`7d5ed939 5d              pop     rbp
+00007ff8`7d5ed93a c3              ret
+00007ff8`7d5ed93b e8c0159e5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ff8`dcfcef00)
+00007ff8`7d5ed940 cc              int     3
+00007ff8`7d5ed941 0000            add     byte ptr [rax],al
+00007ff8`7d5ed943 0019            add     byte ptr [rcx],bl
+00007ff8`7d5ed945 07              ???
+00007ff8`7d5ed946 0400            add     al,0
+00007ff8`7d5ed948 07              ???
+00007ff8`7d5ed949 52              push    rdx
+00007ff8`7d5ed94a 036002          add     esp,dword ptr [rax+2]
+00007ff8`7d5ed94d 7001            jo      00007ff8`7d5ed950
+00007ff8`7d5ed94f 50              push    rax
+00007ff8`7d5ed950 400000          add     byte ptr [rax],al
+00007ff8`7d5ed953 0000            add     byte ptr [rax],al
+00007ff8`7d5ed955 0000            add     byte ptr [rax],al
+00007ff8`7d5ed957 00707f          add     byte ptr [rax+7Fh],dh
+00007ff8`7d5ed95a 667df8          jge     00000000`0000d955
+00007ff8`dca8ed30 4883ec28        sub     rsp,28h
+00007ff8`dca8ed34 90              nop
+00007ff8`dca8ed35 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]
+00007ff8`dca8ed3b 3b5014          cmp     edx,dword ptr [rax+14h]
+00007ff8`dca8ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed40 8b5108          mov     edx,dword ptr [rcx+8]
+00007ff8`dca8ed43 3b5010          cmp     edx,dword ptr [rax+10h]
+00007ff8`dca8ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ff8`dca8ed69)
+00007ff8`dca8ed48 488b4008        mov     rax,qword ptr [rax+8]
+00007ff8`dca8ed4c 3b5008          cmp     edx,dword ptr [rax+8]
+00007ff8`dca8ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ff8`dca8ed91)
+00007ff8`dca8ed51 4863d2          movsxd  rdx,edx
+00007ff8`dca8ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]
+00007ff8`dca8ed59 884110          mov     byte ptr [rcx+10h],al
+00007ff8`dca8ed5c ff4108          inc     dword ptr [rcx+8]
+00007ff8`dca8ed5f b801000000      mov     eax,1
+00007ff8`dca8ed64 4883c428        add     rsp,28h
+00007ff8`dca8ed68 c3              ret
+00007ff8`dca8ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]
+00007ff8`dca8ed6c 488b11          mov     rdx,qword ptr [rcx]
+00007ff8`dca8ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]
+00007ff8`dca8ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ff8`dca8ed8a)
+00007ff8`dca8ed74 488b01          mov     rax,qword ptr [rcx]
+00007ff8`dca8ed77 8b4010          mov     eax,dword ptr [rax+10h]
+00007ff8`dca8ed7a ffc0            inc     eax
+00007ff8`dca8ed7c 894108          mov     dword ptr [rcx+8],eax
+00007ff8`dca8ed7f c6411000        mov     byte ptr [rcx+10h],0
+00007ff8`dca8ed83 33c0            xor     eax,eax
+00007ff8`dca8ed85 4883c428        add     rsp,28h
+00007ff8`dca8ed89 c3              ret
+00007ff8`dca8ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ff8`dc4572a0)]
+00007ff8`dca8ed90 cc              int     3
+
+Abstract method
+System.IDisposable.Dispose()
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ListForSimple</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5f5765 33c0            xor     eax,eax
+00007ff8`7d5f5767 33d2            xor     edx,edx
+00007ff8`7d5f5769 eb22            jmp     00007ff8`7d5f578d
+00007ff8`7d5f576b 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f576f 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f5773 7327            jae     00007ff8`7d5f579c
+00007ff8`7d5f5775 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5f5779 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f577d 7323            jae     00007ff8`7d5f57a2
+00007ff8`7d5f577f 4c63ca          movsxd  r9,edx
+00007ff8`7d5f5782 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f5788 4103c0          add     eax,r8d
+00007ff8`7d5f578b ffc2            inc     edx
+00007ff8`7d5f578d 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f5791 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f5795 7cd4            jl      00007ff8`7d5f576b
+00007ff8`7d5f5797 4883c428        add     rsp,28h
+00007ff8`7d5f579b c3              ret
+00007ff8`7d5f579c e8ffccdbff      call    00007ff8`7d3b24a0
+00007ff8`7d5f57a1 cc              int     3
 
 Method got most probably inlined
 System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca59820 Bdn1.LoopOverArrayOfBytes.ListForToArray()
-00007ffd`aca5982f 33d2            xor     edx,edx
-00007ffd`aca59831 33c9            xor     ecx,ecx
-00007ffd`aca59833 448b4008        mov     r8d,dword ptr [rax+8]
-00007ffd`aca59837 4585c0          test    r8d,r8d
-00007ffd`aca5983a 7e13            jle     00007ffd`aca5984f
-00007ffd`aca5983c 4c63c9          movsxd  r9,ecx
-00007ffd`aca5983f 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
-00007ffd`aca59845 4103d1          add     edx,r9d
-00007ffd`aca59848 ffc1            inc     ecx
-00007ffd`aca5984a 443bc1          cmp     r8d,ecx
-00007ffd`aca5984d 7fed            jg      00007ffd`aca5983c
-00007ffd`aca5984f 8bc2            mov     eax,edx
+00007ff8`7d5f92e0 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5f92e4 33c0            xor     eax,eax
+00007ff8`7d5f92e6 33d2            xor     edx,edx
+00007ff8`7d5f92e8 eb22            jmp     00007ff8`7d5f930c
+00007ff8`7d5f92ea 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f92ee 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f92f2 7327            jae     00007ff8`7d5f931b
+00007ff8`7d5f92f4 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5f92f8 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f92fc 7323            jae     00007ff8`7d5f9321
+00007ff8`7d5f92fe 4c63ca          movsxd  r9,edx
+00007ff8`7d5f9301 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f9307 4103c0          add     eax,r8d
+00007ff8`7d5f930a ffc2            inc     edx
+00007ff8`7d5f930c 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f9310 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f9314 7cd4            jl      00007ff8`7d5f92ea
+00007ff8`7d5f9316 4883c428        add     rsp,28h
+00007ff8`7d5f931a c3              ret
+00007ff8`7d5f931b e830f2d9ff      call    00007ff8`7d398550
+00007ff8`7d5f9320 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
 
 </code></pre></td>
 <td style="vertical-align:top;"><pre><code>
-00007ffd`aca496f0 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
-00007ffd`aca496f4 488b5110        mov     rdx,qword ptr [rcx+10h]
-00007ffd`aca496f8 33c0            xor     eax,eax
-00007ffd`aca496fa 33c9            xor     ecx,ecx
-00007ffd`aca496fc 448b4210        mov     r8d,dword ptr [rdx+10h]
-00007ffd`aca49700 4585c0          test    r8d,r8d
-00007ffd`aca49703 7e22            jle     00007ffd`aca49727
-00007ffd`aca49705 413bc8          cmp     ecx,r8d
-00007ffd`aca49708 7322            jae     00007ffd`aca4972c
-00007ffd`aca4970a 4c8b4a08        mov     r9,qword ptr [rdx+8]
-00007ffd`aca4970e 413b4908        cmp     ecx,dword ptr [r9+8]
-00007ffd`aca49712 731e            jae     00007ffd`aca49732
-00007ffd`aca49714 4c63d1          movsxd  r10,ecx
-00007ffd`aca49717 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
-00007ffd`aca4971d 4103c1          add     eax,r9d
-00007ffd`aca49720 ffc1            inc     ecx
-00007ffd`aca49722 413bc8          cmp     ecx,r8d
-00007ffd`aca49725 7cde            jl      00007ffd`aca49705
-00007ffd`aca49727 4883c428        add     rsp,28h
-00007ffd`aca4972b c3              ret
-00007ffd`aca4972c e8cfefdaff      call    00007ffd`ac7f8700
-00007ffd`aca49731 cc              int     3
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5e5765 33c0            xor     eax,eax
+00007ff8`7d5e5767 33d2            xor     edx,edx
+00007ff8`7d5e5769 eb22            jmp     00007ff8`7d5e578d
+00007ff8`7d5e576b 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5e576f 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5e5773 7327            jae     00007ff8`7d5e579c
+00007ff8`7d5e5775 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5e5779 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5e577d 7323            jae     00007ff8`7d5e57a2
+00007ff8`7d5e577f 4c63ca          movsxd  r9,edx
+00007ff8`7d5e5782 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5e5788 4103c0          add     eax,r8d
+00007ff8`7d5e578b ffc2            inc     edx
+00007ff8`7d5e578d 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5e5791 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5e5795 7cd4            jl      00007ff8`7d5e576b
+00007ff8`7d5e5797 4883c428        add     rsp,28h
+00007ff8`7d5e579b c3              ret
+00007ff8`7d5e579c e8ffccdbff      call    00007ff8`7d3a24a0
+00007ff8`7d5e57a1 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f92e0 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5f92e4 33c0            xor     eax,eax
+00007ff8`7d5f92e6 33d2            xor     edx,edx
+00007ff8`7d5f92e8 eb22            jmp     00007ff8`7d5f930c
+00007ff8`7d5f92ea 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f92ee 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f92f2 7327            jae     00007ff8`7d5f931b
+00007ff8`7d5f92f4 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5f92f8 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f92fc 7323            jae     00007ff8`7d5f9321
+00007ff8`7d5f92fe 4c63ca          movsxd  r9,edx
+00007ff8`7d5f9301 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f9307 4103c0          add     eax,r8d
+00007ff8`7d5f930a ffc2            inc     edx
+00007ff8`7d5f930c 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f9310 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f9314 7cd4            jl      00007ff8`7d5f92ea
+00007ff8`7d5f9316 4883c428        add     rsp,28h
+00007ff8`7d5f931a c3              ret
+00007ff8`7d5f931b e830f2d9ff      call    00007ff8`7d398550
+00007ff8`7d5f9320 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d5760 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5d5765 33c0            xor     eax,eax
+00007ff8`7d5d5767 33d2            xor     edx,edx
+00007ff8`7d5d5769 eb22            jmp     00007ff8`7d5d578d
+00007ff8`7d5d576b 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5d576f 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5d5773 7327            jae     00007ff8`7d5d579c
+00007ff8`7d5d5775 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5d5779 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5d577d 7323            jae     00007ff8`7d5d57a2
+00007ff8`7d5d577f 4c63ca          movsxd  r9,edx
+00007ff8`7d5d5782 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5d5788 4103c0          add     eax,r8d
+00007ff8`7d5d578b ffc2            inc     edx
+00007ff8`7d5d578d 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5d5791 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5d5795 7cd4            jl      00007ff8`7d5d576b
+00007ff8`7d5d5797 4883c428        add     rsp,28h
+00007ff8`7d5d579b c3              ret
+00007ff8`7d5d579c e8ffccdbff      call    00007ff8`7d3924a0
+00007ff8`7d5d57a1 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f92e0 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5f92e4 33c0            xor     eax,eax
+00007ff8`7d5f92e6 33d2            xor     edx,edx
+00007ff8`7d5f92e8 eb22            jmp     00007ff8`7d5f930c
+00007ff8`7d5f92ea 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f92ee 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f92f2 7327            jae     00007ff8`7d5f931b
+00007ff8`7d5f92f4 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5f92f8 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5f92fc 7323            jae     00007ff8`7d5f9321
+00007ff8`7d5f92fe 4c63ca          movsxd  r9,edx
+00007ff8`7d5f9301 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5f9307 4103c0          add     eax,r8d
+00007ff8`7d5f930a ffc2            inc     edx
+00007ff8`7d5f930c 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5f9310 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5f9314 7cd4            jl      00007ff8`7d5f92ea
+00007ff8`7d5f9316 4883c428        add     rsp,28h
+00007ff8`7d5f931a c3              ret
+00007ff8`7d5f931b e830f2d9ff      call    00007ff8`7d398550
+00007ff8`7d5f9320 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d5e5765 33c0            xor     eax,eax
+00007ff8`7d5e5767 33d2            xor     edx,edx
+00007ff8`7d5e5769 eb22            jmp     00007ff8`7d5e578d
+00007ff8`7d5e576b 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5e576f 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5e5773 7327            jae     00007ff8`7d5e579c
+00007ff8`7d5e5775 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d5e5779 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d5e577d 7323            jae     00007ff8`7d5e57a2
+00007ff8`7d5e577f 4c63ca          movsxd  r9,edx
+00007ff8`7d5e5782 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d5e5788 4103c0          add     eax,r8d
+00007ff8`7d5e578b ffc2            inc     edx
+00007ff8`7d5e578d 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d5e5791 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d5e5795 7cd4            jl      00007ff8`7d5e576b
+00007ff8`7d5e5797 4883c428        add     rsp,28h
+00007ff8`7d5e579b c3              ret
+00007ff8`7d5e579c e8ffccdbff      call    00007ff8`7d3a24a0
+00007ff8`7d5e57a1 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d619410 Bdn1.LoopOverArrayOfBytes.ListForSimple()
+00007ff8`7d619414 33c0            xor     eax,eax
+00007ff8`7d619416 33d2            xor     edx,edx
+00007ff8`7d619418 eb22            jmp     00007ff8`7d61943c
+00007ff8`7d61941a 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d61941e 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d619422 7327            jae     00007ff8`7d61944b
+00007ff8`7d619424 4d8b4008        mov     r8,qword ptr [r8+8]
+00007ff8`7d619428 413b5008        cmp     edx,dword ptr [r8+8]
+00007ff8`7d61942c 7323            jae     00007ff8`7d619451
+00007ff8`7d61942e 4c63ca          movsxd  r9,edx
+00007ff8`7d619431 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]
+00007ff8`7d619437 4103c0          add     eax,r8d
+00007ff8`7d61943a ffc2            inc     edx
+00007ff8`7d61943c 4c8b4110        mov     r8,qword ptr [rcx+10h]
+00007ff8`7d619440 413b5010        cmp     edx,dword ptr [r8+10h]
+00007ff8`7d619444 7cd4            jl      00007ff8`7d61941a
+00007ff8`7d619446 4883c428        add     rsp,28h
+00007ff8`7d61944a c3              ret
+00007ff8`7d61944b e800f1d9ff      call    00007ff8`7d3b8550
+00007ff8`7d619450 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ListForToArray</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e5760 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5e5770 33d2            xor     edx,edx
+00007ff8`7d5e5772 33c9            xor     ecx,ecx
+00007ff8`7d5e5774 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5e5778 4585c0          test    r8d,r8d
+00007ff8`7d5e577b 7e13            jle     00007ff8`7d5e5790
+00007ff8`7d5e577d 4c63c9          movsxd  r9,ecx
+00007ff8`7d5e5780 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5e5786 4103d1          add     edx,r9d
+00007ff8`7d5e5789 ffc1            inc     ecx
+00007ff8`7d5e578b 443bc1          cmp     r8d,ecx
+00007ff8`7d5e578e 7fed            jg      00007ff8`7d5e577d
+00007ff8`7d5e5790 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d6092e0 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d6092ef 33d2            xor     edx,edx
+00007ff8`7d6092f1 33c9            xor     ecx,ecx
+00007ff8`7d6092f3 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d6092f7 4585c0          test    r8d,r8d
+00007ff8`7d6092fa 7e13            jle     00007ff8`7d60930f
+00007ff8`7d6092fc 4c63c9          movsxd  r9,ecx
+00007ff8`7d6092ff 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d609305 4103d1          add     edx,r9d
+00007ff8`7d609308 ffc1            inc     ecx
+00007ff8`7d60930a 443bc1          cmp     r8d,ecx
+00007ff8`7d60930d 7fed            jg      00007ff8`7d6092fc
+00007ff8`7d60930f 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5f5760 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5f5770 33d2            xor     edx,edx
+00007ff8`7d5f5772 33c9            xor     ecx,ecx
+00007ff8`7d5f5774 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5f5778 4585c0          test    r8d,r8d
+00007ff8`7d5f577b 7e13            jle     00007ff8`7d5f5790
+00007ff8`7d5f577d 4c63c9          movsxd  r9,ecx
+00007ff8`7d5f5780 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5f5786 4103d1          add     edx,r9d
+00007ff8`7d5f5789 ffc1            inc     ecx
+00007ff8`7d5f578b 443bc1          cmp     r8d,ecx
+00007ff8`7d5f578e 7fed            jg      00007ff8`7d5f577d
+00007ff8`7d5f5790 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d619410 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d61941f 33d2            xor     edx,edx
+00007ff8`7d619421 33c9            xor     ecx,ecx
+00007ff8`7d619423 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d619427 4585c0          test    r8d,r8d
+00007ff8`7d61942a 7e13            jle     00007ff8`7d61943f
+00007ff8`7d61942c 4c63c9          movsxd  r9,ecx
+00007ff8`7d61942f 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d619435 4103d1          add     edx,r9d
+00007ff8`7d619438 ffc1            inc     ecx
+00007ff8`7d61943a 443bc1          cmp     r8d,ecx
+00007ff8`7d61943d 7fed            jg      00007ff8`7d61942c
+00007ff8`7d61943f 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c5760 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5c5770 33d2            xor     edx,edx
+00007ff8`7d5c5772 33c9            xor     ecx,ecx
+00007ff8`7d5c5774 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5c5778 4585c0          test    r8d,r8d
+00007ff8`7d5c577b 7e13            jle     00007ff8`7d5c5790
+00007ff8`7d5c577d 4c63c9          movsxd  r9,ecx
+00007ff8`7d5c5780 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5c5786 4103d1          add     edx,r9d
+00007ff8`7d5c5789 ffc1            inc     ecx
+00007ff8`7d5c578b 443bc1          cmp     r8d,ecx
+00007ff8`7d5c578e 7fed            jg      00007ff8`7d5c577d
+00007ff8`7d5c5790 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d9410 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5d941f 33d2            xor     edx,edx
+00007ff8`7d5d9421 33c9            xor     ecx,ecx
+00007ff8`7d5d9423 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5d9427 4585c0          test    r8d,r8d
+00007ff8`7d5d942a 7e13            jle     00007ff8`7d5d943f
+00007ff8`7d5d942c 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d942f 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d9435 4103d1          add     edx,r9d
+00007ff8`7d5d9438 ffc1            inc     ecx
+00007ff8`7d5d943a 443bc1          cmp     r8d,ecx
+00007ff8`7d5d943d 7fed            jg      00007ff8`7d5d942c
+00007ff8`7d5d943f 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c5760 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5c5770 33d2            xor     edx,edx
+00007ff8`7d5c5772 33c9            xor     ecx,ecx
+00007ff8`7d5c5774 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5c5778 4585c0          test    r8d,r8d
+00007ff8`7d5c577b 7e13            jle     00007ff8`7d5c5790
+00007ff8`7d5c577d 4c63c9          movsxd  r9,ecx
+00007ff8`7d5c5780 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5c5786 4103d1          add     edx,r9d
+00007ff8`7d5c5789 ffc1            inc     ecx
+00007ff8`7d5c578b 443bc1          cmp     r8d,ecx
+00007ff8`7d5c578e 7fed            jg      00007ff8`7d5c577d
+00007ff8`7d5c5790 8bc2            mov     eax,edx
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d9410 Bdn1.LoopOverArrayOfBytes.ListForToArray()
+00007ff8`7d5d941f 33d2            xor     edx,edx
+00007ff8`7d5d9421 33c9            xor     ecx,ecx
+00007ff8`7d5d9423 448b4008        mov     r8d,dword ptr [rax+8]
+00007ff8`7d5d9427 4585c0          test    r8d,r8d
+00007ff8`7d5d942a 7e13            jle     00007ff8`7d5d943f
+00007ff8`7d5d942c 4c63c9          movsxd  r9,ecx
+00007ff8`7d5d942f 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]
+00007ff8`7d5d9435 4103d1          add     edx,r9d
+00007ff8`7d5d9438 ffc1            inc     ecx
+00007ff8`7d5d943a 443bc1          cmp     r8d,ecx
+00007ff8`7d5d943d 7fed            jg      00007ff8`7d5d942c
+00007ff8`7d5d943f 8bc2            mov     eax,edx
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="8">LoopOverArrayOfBytes.ListForLocalCached</th></tr>
+<tr>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+<th>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5b5760 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5b5765 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5b5769 33c0            xor     eax,eax
+00007ff8`7d5b576b 33c9            xor     ecx,ecx
+00007ff8`7d5b576d 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5b5771 4585c0          test    r8d,r8d
+00007ff8`7d5b5774 7e22            jle     00007ff8`7d5b5798
+00007ff8`7d5b5776 413bc8          cmp     ecx,r8d
+00007ff8`7d5b5779 7322            jae     00007ff8`7d5b579d
+00007ff8`7d5b577b 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5b577f 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5b5783 731e            jae     00007ff8`7d5b57a3
+00007ff8`7d5b5785 4c63d1          movsxd  r10,ecx
+00007ff8`7d5b5788 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5b578e 4103c1          add     eax,r9d
+00007ff8`7d5b5791 ffc1            inc     ecx
+00007ff8`7d5b5793 413bc8          cmp     ecx,r8d
+00007ff8`7d5b5796 7cde            jl      00007ff8`7d5b5776
+00007ff8`7d5b5798 4883c428        add     rsp,28h
+00007ff8`7d5b579c c3              ret
+00007ff8`7d5b579d e8feccdbff      call    00007ff8`7d3724a0
+00007ff8`7d5b57a2 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5d9410 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5d9414 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5d9418 33c0            xor     eax,eax
+00007ff8`7d5d941a 33c9            xor     ecx,ecx
+00007ff8`7d5d941c 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5d9420 4585c0          test    r8d,r8d
+00007ff8`7d5d9423 7e22            jle     00007ff8`7d5d9447
+00007ff8`7d5d9425 413bc8          cmp     ecx,r8d
+00007ff8`7d5d9428 7322            jae     00007ff8`7d5d944c
+00007ff8`7d5d942a 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5d942e 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5d9432 731e            jae     00007ff8`7d5d9452
+00007ff8`7d5d9434 4c63d1          movsxd  r10,ecx
+00007ff8`7d5d9437 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5d943d 4103c1          add     eax,r9d
+00007ff8`7d5d9440 ffc1            inc     ecx
+00007ff8`7d5d9442 413bc8          cmp     ecx,r8d
+00007ff8`7d5d9445 7cde            jl      00007ff8`7d5d9425
+00007ff8`7d5d9447 4883c428        add     rsp,28h
+00007ff8`7d5d944b c3              ret
+00007ff8`7d5d944c e8fff0d9ff      call    00007ff8`7d378550
+00007ff8`7d5d9451 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c5760 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5c5765 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5c5769 33c0            xor     eax,eax
+00007ff8`7d5c576b 33c9            xor     ecx,ecx
+00007ff8`7d5c576d 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5c5771 4585c0          test    r8d,r8d
+00007ff8`7d5c5774 7e22            jle     00007ff8`7d5c5798
+00007ff8`7d5c5776 413bc8          cmp     ecx,r8d
+00007ff8`7d5c5779 7322            jae     00007ff8`7d5c579d
+00007ff8`7d5c577b 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5c577f 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5c5783 731e            jae     00007ff8`7d5c57a3
+00007ff8`7d5c5785 4c63d1          movsxd  r10,ecx
+00007ff8`7d5c5788 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5c578e 4103c1          add     eax,r9d
+00007ff8`7d5c5791 ffc1            inc     ecx
+00007ff8`7d5c5793 413bc8          cmp     ecx,r8d
+00007ff8`7d5c5796 7cde            jl      00007ff8`7d5c5776
+00007ff8`7d5c5798 4883c428        add     rsp,28h
+00007ff8`7d5c579c c3              ret
+00007ff8`7d5c579d e8feccdbff      call    00007ff8`7d3824a0
+00007ff8`7d5c57a2 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e9410 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5e9414 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5e9418 33c0            xor     eax,eax
+00007ff8`7d5e941a 33c9            xor     ecx,ecx
+00007ff8`7d5e941c 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5e9420 4585c0          test    r8d,r8d
+00007ff8`7d5e9423 7e22            jle     00007ff8`7d5e9447
+00007ff8`7d5e9425 413bc8          cmp     ecx,r8d
+00007ff8`7d5e9428 7322            jae     00007ff8`7d5e944c
+00007ff8`7d5e942a 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5e942e 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5e9432 731e            jae     00007ff8`7d5e9452
+00007ff8`7d5e9434 4c63d1          movsxd  r10,ecx
+00007ff8`7d5e9437 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5e943d 4103c1          add     eax,r9d
+00007ff8`7d5e9440 ffc1            inc     ecx
+00007ff8`7d5e9442 413bc8          cmp     ecx,r8d
+00007ff8`7d5e9445 7cde            jl      00007ff8`7d5e9425
+00007ff8`7d5e9447 4883c428        add     rsp,28h
+00007ff8`7d5e944b c3              ret
+00007ff8`7d5e944c e8fff0d9ff      call    00007ff8`7d388550
+00007ff8`7d5e9451 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5b5760 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5b5765 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5b5769 33c0            xor     eax,eax
+00007ff8`7d5b576b 33c9            xor     ecx,ecx
+00007ff8`7d5b576d 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5b5771 4585c0          test    r8d,r8d
+00007ff8`7d5b5774 7e22            jle     00007ff8`7d5b5798
+00007ff8`7d5b5776 413bc8          cmp     ecx,r8d
+00007ff8`7d5b5779 7322            jae     00007ff8`7d5b579d
+00007ff8`7d5b577b 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5b577f 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5b5783 731e            jae     00007ff8`7d5b57a3
+00007ff8`7d5b5785 4c63d1          movsxd  r10,ecx
+00007ff8`7d5b5788 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5b578e 4103c1          add     eax,r9d
+00007ff8`7d5b5791 ffc1            inc     ecx
+00007ff8`7d5b5793 413bc8          cmp     ecx,r8d
+00007ff8`7d5b5796 7cde            jl      00007ff8`7d5b5776
+00007ff8`7d5b5798 4883c428        add     rsp,28h
+00007ff8`7d5b579c c3              ret
+00007ff8`7d5b579d e8feccdbff      call    00007ff8`7d3724a0
+00007ff8`7d5b57a2 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5e9410 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5e9414 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5e9418 33c0            xor     eax,eax
+00007ff8`7d5e941a 33c9            xor     ecx,ecx
+00007ff8`7d5e941c 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5e9420 4585c0          test    r8d,r8d
+00007ff8`7d5e9423 7e22            jle     00007ff8`7d5e9447
+00007ff8`7d5e9425 413bc8          cmp     ecx,r8d
+00007ff8`7d5e9428 7322            jae     00007ff8`7d5e944c
+00007ff8`7d5e942a 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5e942e 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5e9432 731e            jae     00007ff8`7d5e9452
+00007ff8`7d5e9434 4c63d1          movsxd  r10,ecx
+00007ff8`7d5e9437 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5e943d 4103c1          add     eax,r9d
+00007ff8`7d5e9440 ffc1            inc     ecx
+00007ff8`7d5e9442 413bc8          cmp     ecx,r8d
+00007ff8`7d5e9445 7cde            jl      00007ff8`7d5e9425
+00007ff8`7d5e9447 4883c428        add     rsp,28h
+00007ff8`7d5e944b c3              ret
+00007ff8`7d5e944c e8fff0d9ff      call    00007ff8`7d388550
+00007ff8`7d5e9451 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d5c5760 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d5c5765 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d5c5769 33c0            xor     eax,eax
+00007ff8`7d5c576b 33c9            xor     ecx,ecx
+00007ff8`7d5c576d 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d5c5771 4585c0          test    r8d,r8d
+00007ff8`7d5c5774 7e22            jle     00007ff8`7d5c5798
+00007ff8`7d5c5776 413bc8          cmp     ecx,r8d
+00007ff8`7d5c5779 7322            jae     00007ff8`7d5c579d
+00007ff8`7d5c577b 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d5c577f 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d5c5783 731e            jae     00007ff8`7d5c57a3
+00007ff8`7d5c5785 4c63d1          movsxd  r10,ecx
+00007ff8`7d5c5788 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d5c578e 4103c1          add     eax,r9d
+00007ff8`7d5c5791 ffc1            inc     ecx
+00007ff8`7d5c5793 413bc8          cmp     ecx,r8d
+00007ff8`7d5c5796 7cde            jl      00007ff8`7d5c5776
+00007ff8`7d5c5798 4883c428        add     rsp,28h
+00007ff8`7d5c579c c3              ret
+00007ff8`7d5c579d e8feccdbff      call    00007ff8`7d3824a0
+00007ff8`7d5c57a2 cc              int     3
+
+Method got most probably inlined
+System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+00007ff8`7d609410 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()
+00007ff8`7d609414 488b5110        mov     rdx,qword ptr [rcx+10h]
+00007ff8`7d609418 33c0            xor     eax,eax
+00007ff8`7d60941a 33c9            xor     ecx,ecx
+00007ff8`7d60941c 448b4210        mov     r8d,dword ptr [rdx+10h]
+00007ff8`7d609420 4585c0          test    r8d,r8d
+00007ff8`7d609423 7e22            jle     00007ff8`7d609447
+00007ff8`7d609425 413bc8          cmp     ecx,r8d
+00007ff8`7d609428 7322            jae     00007ff8`7d60944c
+00007ff8`7d60942a 4c8b4a08        mov     r9,qword ptr [rdx+8]
+00007ff8`7d60942e 413b4908        cmp     ecx,dword ptr [r9+8]
+00007ff8`7d609432 731e            jae     00007ff8`7d609452
+00007ff8`7d609434 4c63d1          movsxd  r10,ecx
+00007ff8`7d609437 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]
+00007ff8`7d60943d 4103c1          add     eax,r9d
+00007ff8`7d609440 ffc1            inc     ecx
+00007ff8`7d609442 413bc8          cmp     ecx,r8d
+00007ff8`7d609445 7cde            jl      00007ff8`7d609425
+00007ff8`7d609447 4883c428        add     rsp,28h
+00007ff8`7d60944b c3              ret
+00007ff8`7d60944c e8fff0d9ff      call    00007ff8`7d3a8550
+00007ff8`7d609451 cc              int     3
 
 Method got most probably inlined
 System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()

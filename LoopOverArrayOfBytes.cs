@@ -9,7 +9,7 @@ namespace Bdn1
         private byte[] _byteData;
         private List<byte> _byteDataList;
 
-        [Params(50)]
+        [Params(16, 256, 1024, 4096)]
         public int N { get; set; }
 
         [GlobalSetup]
@@ -66,6 +66,34 @@ namespace Bdn1
 
             return sum;
         }
+
+        [Benchmark]
+        public int ForLocalCachedUnrolled()
+        {
+            var data = _byteData;
+
+            var l1 = data.Length / 4;
+
+            int sum = 0;
+            int index = 0; 
+            for (int i = 0; i < l1; ++i)
+            {
+                index = i * 4;
+
+                sum += data[index];
+                sum += data[index + 1];
+                sum += data[index + 2];
+                sum += data[index + 3];
+            }
+
+            for (int i = (index  + 1) * 4; i < data.Length; ++i)
+            {
+                sum += data[i];
+            }
+
+            return sum;
+        }
+
 
         [Benchmark]
         public int ListForeachSimple()

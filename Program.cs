@@ -15,6 +15,7 @@ namespace ListBenchmarks
         {
             var config = 
                 DefaultConfig.Instance
+                    .With(Job.Default.With(CoreRuntime.Core30).WithEnvironmentVariable(JitTieredCompilation, "0"))
                     .With(Job.Default.With(CoreRuntime.Core30).WithEnvironmentVariable(JitTieredCompilation, "1"));
 
             BenchmarkSwitcher
