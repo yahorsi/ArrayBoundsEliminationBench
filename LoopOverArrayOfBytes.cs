@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Bdn1
 {
-    [DisassemblyDiagnoser]
+    [DisassemblyDiagnoser(printAsm: true, printIL: false, printPrologAndEpilog: true)]
     public class LoopOverArrayOfBytes
     {
         private byte[] _byteData;
         private List<byte> _byteDataList;
 
-        [Params(16, 256, 1024, 4096)]
+        [Params(4, 16, 256)]
         public int N { get; set; }
 
         [GlobalSetup]
@@ -140,6 +140,34 @@ namespace Bdn1
 
             int sum = 0;
             for (int i = 0; i < data.Count; ++i)
+            {
+                sum += data[i];
+            }
+
+            return sum;
+        }
+
+
+        [Benchmark]
+        public int ListForLocalCachedUnrolled()
+        {
+            var data = _byteDataList;
+
+            var l1 = data.Count / 4;
+
+            int sum = 0;
+            int index = 0;
+            for (int i = 0; i < l1; ++i)
+            {
+                index = i * 4;
+
+                sum += data[index];
+                sum += data[index + 1];
+                sum += data[index + 2];
+                sum += data[index + 3];
+            }
+
+            for (int i = (index + 1) * 4; i < data.Count; ++i)
             {
                 sum += data[i];
             }
