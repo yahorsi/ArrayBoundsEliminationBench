@@ -1,0 +1,901 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8' />
+<title>Output of DisassemblyDiagnoser for Bdn1.LoopOverArrayOfBytes-20191029-112535</title>
+
+<style type="text/css">
+    pre { margin: 0px; }
+    table { border-collapse:collapse; }
+    td.perMethod { border-top: 1px black solid; }
+    tr.evenMap td { background-color: #F5F5F5; }  
+</style>
+</head>
+<body>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499921440" style="text-align: left;">00007ffd`aca49820 Bdn1.LoopOverArrayOfBytes.Foreach()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49820 488b4108        mov     rax,qword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49824 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49826 33c9            xor     ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49828 448b4008        mov     r8d,dword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4982c 4585c0          test    r8d,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4982f 7e13            jle     00007ffd`aca49844</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49831 4c63c9          movsxd  r9,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49834 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4983a 4103d1          add     edx,r9d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4983d ffc1            inc     ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4983f 443bc1          cmp     r8d,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49842 7fed            jg      00007ffd`aca49831</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49844 8bc2            mov     eax,edx</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499790368" style="text-align: left;">00007ffd`aca29820 Bdn1.LoopOverArrayOfBytes.ForSimple()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29824 33c0            xor     eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29826 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29828 488b4908        mov     rcx,qword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca2982c 83790800        cmp     dword ptr [rcx+8],0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29830 7e1c            jle     00007ffd`aca2984e</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29832 4c8bc1          mov     r8,rcx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29835 413b5008        cmp     edx,dword ptr [r8+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29839 7318            jae     00007ffd`aca29853</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca2983b 4c63ca          movsxd  r9,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca2983e 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29844 4103c0          add     eax,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29847 ffc2            inc     edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca29849 395108          cmp     dword ptr [rcx+8],edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca2984c 7fe4            jg      00007ffd`aca29832</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca2984e 4883c428        add     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727500052512" style="text-align: left;">00007ffd`aca69820 Bdn1.LoopOverArrayOfBytes.ForLocalCached()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69820 488b4108        mov     rax,qword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69824 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69826 33c9            xor     ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69828 448b4008        mov     r8d,dword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca6982c 4585c0          test    r8d,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca6982f 7e13            jle     00007ffd`aca69844</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69831 4c63c9          movsxd  r9,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69834 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca6983a 4103d1          add     edx,r9d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca6983d ffc1            inc     ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca6983f 443bc1          cmp     r8d,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69842 7fed            jg      00007ffd`aca69831</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca69844 8bc2            mov     eax,edx</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499922768" style="text-align: left;">00007ffd`aca49d50 Bdn1.LoopOverArrayOfBytes.ListForeachSimple()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d66 33f6            xor     esi,esi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d68 488b4910        mov     rcx,qword ptr [rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d6c 8b01            mov     eax,dword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d6e 8b4114          mov     eax,dword ptr [rcx+14h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d71 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d73 48894c2428      mov     qword ptr [rsp+28h],rcx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d78 33c9            xor     ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d7a 894c2430        mov     dword ptr [rsp+30h],ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d7e 89442434        mov     dword ptr [rsp+34h],eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d82 88542438        mov     byte ptr [rsp+38h],dl</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d86 488d4c2428      lea     rcx,[rsp+28h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d8b e8f03adaff      call    00007ffd`ac7ed880</pre></code></td>
+<td><a href="#140727499928560">MoveNext</a></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d90 85c0            test    eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d92 7417            je      00007ffd`aca49dab</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d94 8b4c2438        mov     ecx,dword ptr [rsp+38h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d98 0fb6c9          movzx   ecx,cl</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d9b 03f1            add     esi,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49d9d 488d4c2428      lea     rcx,[rsp+28h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49da2 e8d93adaff      call    00007ffd`ac7ed880</pre></code></td>
+<td><a href="#140727499928560">MoveNext</a></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49da7 85c0            test    eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49da9 75e9            jne     00007ffd`aca49d94</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49dab 8bc6            mov     eax,esi</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><th colspan="2" id="140727499928560" style="text-align: left;">00007ffd`aca4b3f0 System.Collections.Generic.List`1+Enumerator[[System.Byte, System.Private.CoreLib]].MoveNext()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df56 488b4d10        mov     rcx,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df5a 488b09          mov     rcx,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df5d 48894de8        mov     qword ptr [rbp-18h],rcx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df61 488b4d10        mov     rcx,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df65 8b490c          mov     ecx,dword ptr [rcx+0Ch]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df68 488b45e8        mov     rax,qword ptr [rbp-18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df6c 3b4814          cmp     ecx,dword ptr [rax+14h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df6f 7558            jne     00007ffd`aca4dfc9</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df71 488b4d10        mov     rcx,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df75 8b4908          mov     ecx,dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df78 488b45e8        mov     rax,qword ptr [rbp-18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df7c 3b4810          cmp     ecx,dword ptr [rax+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df7f 7348            jae     00007ffd`aca4dfc9</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df81 488b4de8        mov     rcx,qword ptr [rbp-18h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df85 488b7108        mov     rsi,qword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df89 488b4d10        mov     rcx,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df8d 8b4908          mov     ecx,dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df90 3b4e08          cmp     ecx,dword ptr [rsi+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df93 7346            jae     00007ffd`aca4dfdb</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df95 8bc1            mov     eax,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df97 486bc028        imul    rax,rax,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4df9b 488d740610      lea     rsi,[rsi+rax+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfa0 488b7d10        mov     rdi,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfa4 4883c710        add     rdi,10h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfa8 e8e3568b5f      call    coreclr!coreclr_shutdown_2+0xd1f0 (00007ffe`0c303690)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfad b904000000      mov     ecx,4</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfb2 f348a5          rep movs qword ptr [rdi],qword ptr [rsi]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfb5 488b4510        mov     rax,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfb9 ff4008          inc     dword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfbc b801000000      mov     eax,1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc1 488d65f0        lea     rsp,[rbp-10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc5 5e              pop     rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc6 5f              pop     rdi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc7 5d              pop     rbp</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc8 c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfc9 488b4d10        mov     rcx,qword ptr [rbp+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfcd e836f2ffff      call    00007ffd`aca4d208</pre></code></td>
+<td>System.Collections.Generic.List`1+Enumerator[[BenchmarkDotNet.Reports.Measurement, BenchmarkDotNet]].MoveNextRare()</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfd2 90              nop</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfd3 488d65f0        lea     rsp,[rbp-10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfd7 5e              pop     rsi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfd8 5f              pop     rdi</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfd9 5d              pop     rbp</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfda c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfdb e8200f9e5f      call    coreclr!GetCLRRuntimeHost+0x73860 (00007ffe`0c42ef00)</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe0 cc              int     3</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe1 0000            add     byte ptr [rax],al</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe3 0019            add     byte ptr [rcx],bl</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe5 07              ???</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe6 0400            add     al,0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe8 07              ???</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfe9 52              push    rdx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfea 036002          add     esp,dword ptr [rax+2]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfed 7001            jo      00007ffd`aca4dff0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dfef 50              push    rax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dff0 400000          add     byte ptr [rax],al</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dff3 0000            add     byte ptr [rax],al</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dff5 0000            add     byte ptr [rax],al</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dff7 0028            add     byte ptr [rax],ch</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dff9 82              ???</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4dffa ad              lods    dword ptr [rsi]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed30 4883ec28        sub     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed34 90              nop</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed35 488b01          mov     rax,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed38 8b510c          mov     edx,dword ptr [rcx+0Ch]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed3b 3b5014          cmp     edx,dword ptr [rax+14h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed3e 7529            jne     System_Private_CoreLib+0x64ed69 (00007ffe`09d7ed69)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed40 8b5108          mov     edx,dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed43 3b5010          cmp     edx,dword ptr [rax+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed46 7321            jae     System_Private_CoreLib+0x64ed69 (00007ffe`09d7ed69)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed48 488b4008        mov     rax,qword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed4c 3b5008          cmp     edx,dword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed4f 7340            jae     System_Private_CoreLib+0x64ed91 (00007ffe`09d7ed91)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed51 4863d2          movsxd  rdx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed54 0fb6441010      movzx   eax,byte ptr [rax+rdx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed59 884110          mov     byte ptr [rcx+10h],al</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed5c ff4108          inc     dword ptr [rcx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed5f b801000000      mov     eax,1</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed64 4883c428        add     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed68 c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed69 8b410c          mov     eax,dword ptr [rcx+0Ch]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed6c 488b11          mov     rdx,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed6f 3b4214          cmp     eax,dword ptr [rdx+14h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed72 7516            jne     System_Private_CoreLib+0x64ed8a (00007ffe`09d7ed8a)</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed74 488b01          mov     rax,qword ptr [rcx]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed77 8b4010          mov     eax,dword ptr [rax+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed7a ffc0            inc     eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed7c 894108          mov     dword ptr [rcx+8],eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed7f c6411000        mov     byte ptr [rcx+10h],0</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed83 33c0            xor     eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed85 4883c428        add     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed89 c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed8a ff1510859cff    call    qword ptr [System_Private_CoreLib+0x172a0 (00007ffe`097472a0)]</pre></code></td>
+<td>not managed method</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffe`09d7ed90 cc              int     3</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><td colspan="2"><b>Abstract method</b></td></tr>
+<tr><td colspan="2">System.IDisposable.Dispose()</td></tr>
+<tr><td colspan="{2}"></td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499986672" style="text-align: left;">00007ffd`aca596f0 Bdn1.LoopOverArrayOfBytes.ListForSimple()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca596f4 33c0            xor     eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca596f6 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca596f8 eb22            jmp     00007ffd`aca5971c</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca596fa 4c8b4110        mov     r8,qword ptr [rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca596fe 413b5010        cmp     edx,dword ptr [r8+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59702 7327            jae     00007ffd`aca5972b</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59704 4d8b4008        mov     r8,qword ptr [r8+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59708 413b5008        cmp     edx,dword ptr [r8+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5970c 7323            jae     00007ffd`aca59731</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5970e 4c63ca          movsxd  r9,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59711 470fb6440810    movzx   r8d,byte ptr [r8+r9+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59717 4103c0          add     eax,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5971a ffc2            inc     edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5971c 4c8b4110        mov     r8,qword ptr [rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59720 413b5010        cmp     edx,dword ptr [r8+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59724 7cd4            jl      00007ffd`aca596fa</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59726 4883c428        add     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5972a c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5972b e8d0efdaff      call    00007ffd`ac808700</pre></code></td>
+<td>System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59730 cc              int     3</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><td colspan="2"><b>Method got most probably inlined</b></td></tr>
+<tr><td colspan="2">System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td></tr>
+<tr><td colspan="{2}"></td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499986976" style="text-align: left;">00007ffd`aca59820 Bdn1.LoopOverArrayOfBytes.ListForToArray()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5982f 33d2            xor     edx,edx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59831 33c9            xor     ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59833 448b4008        mov     r8d,dword ptr [rax+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59837 4585c0          test    r8d,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5983a 7e13            jle     00007ffd`aca5984f</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5983c 4c63c9          movsxd  r9,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5983f 460fb64c0810    movzx   r9d,byte ptr [rax+r9+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59845 4103d1          add     edx,r9d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca59848 ffc1            inc     ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5984a 443bc1          cmp     r8d,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5984d 7fed            jg      00007ffd`aca5983c</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca5984f 8bc2            mov     eax,edx</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+</tbody></table>
+<h2>.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT</h2>
+<table>
+<tbody>
+<tr><th colspan="2" id="140727499921136" style="text-align: left;">00007ffd`aca496f0 Bdn1.LoopOverArrayOfBytes.ListForLocalCached()</th><th></th></tr>
+<tr class="">
+<td><pre><code>00007ffd`aca496f4 488b5110        mov     rdx,qword ptr [rcx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca496f8 33c0            xor     eax,eax</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca496fa 33c9            xor     ecx,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca496fc 448b4210        mov     r8d,dword ptr [rdx+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49700 4585c0          test    r8d,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49703 7e22            jle     00007ffd`aca49727</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49705 413bc8          cmp     ecx,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49708 7322            jae     00007ffd`aca4972c</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4970a 4c8b4a08        mov     r9,qword ptr [rdx+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4970e 413b4908        cmp     ecx,dword ptr [r9+8]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49712 731e            jae     00007ffd`aca49732</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49714 4c63d1          movsxd  r10,ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49717 470fb64c1110    movzx   r9d,byte ptr [r9+r10+10h]</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4971d 4103c1          add     eax,r9d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49720 ffc1            inc     ecx</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49722 413bc8          cmp     ecx,r8d</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49725 7cde            jl      00007ffd`aca49705</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49727 4883c428        add     rsp,28h</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4972b c3              ret</pre></code></td>
+<td></td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca4972c e8cfefdaff      call    00007ffd`ac7f8700</pre></code></td>
+<td>System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td>
+</tr>
+<tr class="">
+<td><pre><code>00007ffd`aca49731 cc              int     3</pre></code></td>
+<td></td>
+</tr>
+<tr><td colspan="{2}">&nbsp;</td></tr>
+<tr><td colspan="2"><b>Method got most probably inlined</b></td></tr>
+<tr><td colspan="2">System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()</td></tr>
+<tr><td colspan="{2}"></td></tr>
+</tbody></table>
+</body></html>
